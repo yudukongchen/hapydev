@@ -1,0 +1,11 @@
+[
+  {
+    "id": "xasdas",
+    "type": "string",
+    "match_type": "wildcard",
+    "match_rule": "{avatar,icon}",
+    "match_case": 1,
+    "mock": "@image('400x400')",
+    "remark": "图片"
+  }
+]

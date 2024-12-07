@@ -1,0 +1,64 @@
+import { useDispatch } from 'react-redux';
+import {
+  updateActiveId,
+  addTabsItem,
+  removeTabsItem,
+  batchRemoveTabsItem,
+  removeAllTabs,
+} from '@reducers/apis/tabs';
+import {
+  addOpensItem,
+  batchRemoveOpensItem,
+  clearOpens,
+  removeOpensItem,
+} from '@reducers/apis/opens';
+import { useGlobalSubject } from '@hooks/useSubject';
+
+const useOpens = () => {
+  const dispatch = useDispatch();
+
+  const handleAddOpensItem = (item) => {
+    dispatch(
+      addTabsItem({
+        id: item.id,
+      })
+    );
+    dispatch(
+      addOpensItem({
+        ...item,
+        node_type: item?.node_type,
+      })
+    );
+    dispatch(updateActiveId({ id: item.id }));
+  };
+
+  // const handleRemoveOpensItem = (id) => {
+  //   dispatch(removeTabsItem({ id }));
+  //   dispatch(removeOpensItem({ id }));
+  // };
+
+  const handleBatchRemoveOpensItem = (ids) => {
+    dispatch(batchRemoveTabsItem(ids));
+    dispatch(batchRemoveOpensItem(ids));
+  };
+
+  //关闭全部标签页
+  const handleRemoveAllItems = () => {
+    dispatch(removeAllTabs());
+    dispatch(clearOpens());
+    dispatch(updateActiveId({ id: null }));
+  };
+
+  const handleCloseItems = (id) => {
+    dispatch(removeTabsItem({ id }));
+    dispatch(removeOpensItem({ id }));
+  };
+
+  // useGlobalSubject('APIS/OPENS/addOpensItem', handleAddOpensItem, []);
+  //useGlobalSubject('APIS/OPENS/removeOpensItem', handleRemoveOpensItem, []);
+  // useGlobalSubject('APIS/OPENS/batchRemoveOpensItem', handleBatchRemoveOpensItem, []);
+  // useGlobalSubject('APIS/OPENS/removeAllItems', handleRemoveAllItems, []);
+  // useGlobalSubject('APIS/OPENS/closeItem', handleCloseItems, []);
+};
+
+export default useOpens;

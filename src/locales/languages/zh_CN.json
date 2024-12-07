@@ -1,0 +1,20 @@
+{
+  "lang": {
+    "cn": "中文",
+    "en": "English"
+  },
+  "header": {
+    "project": {
+      "team_project": "团队/项目",
+      "admin_center": "管理中心",
+      "delete_project": "删除项目",
+      "exit_project": "退出项目",
+      "search": "请输入项目名称"
+    },
+    "toolbars": {
+      "share": "分享",
+      "cookie": "Cookie管理",
+      "globalParameters": "全局参数"
+    }
+  }
+}

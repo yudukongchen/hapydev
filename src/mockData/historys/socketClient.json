@@ -1,0 +1,42 @@
+{
+    "id": "6",
+    "parent_id": "socketservice1",
+    "type": "socket_client",
+    "url": "ws://154.221.17.249:8101?uid=10000265",
+    "time": 1713338247000,
+    "data": {
+      "request": {
+        "body": {
+          "mode": "iso8583",
+          "raw_type": null,
+          "iso8583": [],
+          "fixed_packet": [],
+          "delimiter_packet": [],
+          "raw": ""
+        },
+        "post_tasks": [
+          {
+            "type": "customScript",
+            "enabled": 74,
+            "data": "var aaa=1",
+            "id": "34"
+          }
+        ],
+        "config": {
+          "encode_type": "utf8",
+          "packet_end_char": {
+            "enabled": 1,
+            "char": "\\n"
+          },
+          "packet_header_carry_size": 1,
+          "remove_packet_header": {
+            "enabled": 1,
+            "length": 5
+          },
+          "remove_wrap_char": 1,
+          "xml_to_json": 1
+        }
+      },
+      "description": "dasdsadsa"
+    }
+  }

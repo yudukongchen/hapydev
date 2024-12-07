@@ -1,0 +1,123 @@
+{
+  "id": "1",
+  "parent_id": "0",
+  "type": "test_case",
+  "name": "下单成功",
+  "sort": 1,
+  "data": {
+    "iteration_data": [
+      {
+        "id": "1111",
+        "name": "测试登录接口",
+        "updated_time": 1718461890348,
+        "config": {
+          "default": {
+            "list_data": []
+          },
+          "env_configs": {}
+        }
+      }
+    ],
+    "options": {
+      "env_id": "default",
+      "execute_count": 1,
+      "interval_time": 1,
+      "iteration_data_id": "1111",
+      "enable_sandbox": 1,
+      "save_reports": 1,
+      "exception_handler": "ingore"
+    },
+    "process": [
+      {
+        "id": "1",
+        "parent_id": "0",
+        "type": "api",
+        "data": {
+          "api_id": "api2",
+          "is_link": 1
+        },
+        "is_used": 1
+      },
+      {
+        "id": "2",
+        "parent_id": "0",
+        "type": "if",
+        "data": {
+          "var": "aaa",
+          "compare": "eq",
+          "value": "111"
+        },
+        "children": [
+          {
+            "id": "2-1",
+            "parent_id": "2",
+            "type": "api",
+            "data": {
+              "api_id": "api444",
+              "is_link": 1
+            },
+            "is_used": 1
+          }
+        ],
+        "is_used": -1
+      },
+      {
+        "id": "3",
+        "parent_id": "0",
+        "type": "loop",
+        "data": {
+          "loop_type": "map",
+          "map": {
+            "location": "env_variable",
+            "data": "{{user_list}}"
+          },
+          "interval_time": 0,
+          "exception_handler": "ingore"
+        },
+        "is_used": 1
+      },
+      {
+        "id": "4",
+        "parent_id": "0",
+        "type": "loop",
+        "data": {
+          "loop_type": "for",
+          "for": {
+            "execute_count": 3,
+            "iteration_data_id": "1111"
+          },
+          "interval_time": 200,
+          "exception_handler": "ingore"
+        },
+        "is_used": 1
+      },
+      {
+        "id": "5",
+        "parent_id": "0",
+        "type": "wait",
+        "data": {
+          "wait_time": 500
+        },
+        "is_used": 1
+      },
+      {
+        "id": "6",
+        "parent_id": "0",
+        "type": "group",
+        "data": {
+          "name": "订单中心模块"
+        },
+        "is_used": 1
+      },
+      {
+        "id": "7",
+        "parent_id": "0",
+        "type": "database",
+        "data": {
+          "name": "操作数据库"
+        },
+        "is_used": 1
+      }
+    ]
+  }
+}

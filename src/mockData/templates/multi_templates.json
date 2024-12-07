@@ -1,0 +1,45 @@
+{
+  "code": 10060,
+  "msg": "eu elit sint",
+  "data": [
+    {
+      "id": "temp1",
+      "parent_id": "0",
+      "name": "全切元bids",
+      "sort": 97,
+      "version": 214,
+      "create_time": 1742350494,
+      "update_time": 1749072053,
+      "data": {
+        "template_type": "folder",
+        "schema": {}
+      }
+    },
+    {
+      "id": "temp2",
+      "parent_id": "temp1",
+      "name": "全切元bids",
+      "sort": 97,
+      "version": 214,
+      "create_time": 1742350494,
+      "update_time": 1749072053,
+      "data": {
+        "template_type": "template",
+        "schema": {}
+      }
+    },
+    {
+      "id": "temp3",
+      "parent_id": "0",
+      "name": "全切元bids",
+      "sort": 97,
+      "version": 214,
+      "create_time": 1742350494,
+      "update_time": 1749072053,
+      "data": {
+        "template_type": "template",
+        "schema": {}
+      }
+    }
+  ]
+}

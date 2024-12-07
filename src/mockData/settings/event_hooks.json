@@ -1,0 +1,62 @@
+{
+    "code": 10000,
+    "msg": "success",
+    "data": [
+        {
+            "id": 1,
+            "title": "接口",
+            "parent_id": 0,
+            "event": "API",
+            "sort": 1
+        },
+        {
+            "id": 2,
+            "title": "新建接口",
+            "parent_id": 1,
+            "event": "API_CREATED",
+            "sort": 1
+        },
+        {
+            "id": 3,
+            "title": "编辑接口",
+            "parent_id": 1,
+            "event": "API_UPDATED",
+            "sort": 2
+        },
+        {
+            "id": 4,
+            "title": "删除接口",
+            "parent_id": 1,
+            "event": "API_DELETED",
+            "sort": 3
+        },
+        {
+            "id": 6,
+            "title": "目录",
+            "parent_id": 0,
+            "event": "FOLDER",
+            "sort": 2
+        },
+        {
+            "id": 7,
+            "title": "新建目录",
+            "parent_id": 6,
+            "event": "FOLDER_CREATED",
+            "sort": 1
+        },
+        {
+            "id": 8,
+            "title": "编辑目录",
+            "parent_id": 6,
+            "event": "FOLDER_UPDATED",
+            "sort": 2
+        },
+        {
+            "id": 9,
+            "title": "删除目录",
+            "parent_id": 6,
+            "event": "FOLDER_DELETED",
+            "sort": 3
+        }
+    ]
+}

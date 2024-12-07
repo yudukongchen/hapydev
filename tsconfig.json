@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    "allowJs": false,
+    "jsx": "react-jsx",
+    "experimentalDecorators": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "target": "ESNEXT",
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ES2020",
+    "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": "./",
+    "types": ["node","vite/client"],
+    "paths": {
+      "react": ["./node_modules/@types/react"],
+      "@components/*": ["src/components/*"],
+      "@hooks/*": ["src/hooks/*"],
+      "@constants/*": ["src/constants/*"],
+      "@mockData/*": ["src/mockData/*"],
+      "@utils/*": ["src/utils/*"],
+      "@modals/*": ["src/modals/*"],
+      "@assets/*": ["src/assets/*"],
+      "@subjects/*": ["src/subjects/*"],
+      "@reducers/*": ["src/store/reducers/*"],
+      "#types/*": ["src/types/*"],
+      "@dal/*": ["src/common/dal/*"],
+      "@theme/*": ["src/theme/*"],
+      "@services/*": ["src/services/*"],
+      "@db/*": ["src/dataBase/*"],
+      "@bll/*": ["src/bll/*"],
+    },
+    "strict": false,
+    "resolveJsonModule": true
+  },
+  "include": ["./src", "global.d.ts"],
+  "exclude": ["node_modules", "public"]
+}

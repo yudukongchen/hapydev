@@ -1,0 +1,19 @@
+.markdown-section {
+  font-size: 12px;
+}
+.markdown-section table {
+  font-size: 12px;
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  overflow: auto;
+}
+
+.markdown-section table td,
+.markdown-section table th {
+  padding: 8px;
+  border: 1px solid #ddd;
+  word-break: break-all;
+  min-height: 28px;
+}

@@ -1,0 +1,22 @@
+.CodeMirror-vscrollbar,
+.bytemd-preview {
+  &::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--ant-color-fill-quaternary);
+    background-color: var(--ant-color-fill-tertiary);
+  }
+  &::-webkit-scrollbar-track {
+    margin: 1px;
+    background: none;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: var(--ant-color-fill);
+  }
+}
+
+.CodeMirror-selected {
+  background-color: var(--ant-color-fill) !important;
+}

@@ -1,0 +1,62 @@
+{
+    "id": "4",
+    "parent_id": "0",
+    "type": "websocket",
+    "url": "ws://154.221.17.249:8101?uid=10000265",
+    "time": 1713338247000,
+    "data": {
+      "request": {
+        "url": "ws://154.221.17.249:8101?uid=10000265",
+        "method": "websocket",
+        "headers": {
+          "parameter": [
+            {
+              "name": "aaa",
+              "field_type": "String",
+              "value": "{{token}}",
+              "value_type": "text",
+              "is_required": 1,
+              "is_used": 1,
+              "description": ""
+            }
+          ]
+        },
+        "params": {
+          "parameter": [
+            {
+              "name": "bbb",
+              "field_type": "String",
+              "value": "{{token}}",
+              "value_type": "text",
+              "is_required": 1,
+              "is_used": 1,
+              "description": ""
+            }
+          ]
+        },
+        "body": {
+          "mode": "text",
+          "binary_type": null,
+          "raw": "reprehenderit {{token}} consequat"
+        }
+      },
+      "config": {
+        "information_size": 0,
+        "max_reconnect_count": 5,
+        "reconnect_time": 5000,
+        "shake_hand_path": "/socket.io",
+        "shake_hand_timeout": 0,
+        "socket_event_name": "message",
+        "socket_io_event_listeners": [],
+        "socket_io_version": "v3"
+      },
+      "messages": [
+        {
+          "title": "进入游戏",
+          "mode": "text",
+          "binary_type": null,
+          "raw": "dasdasdasdas"
+        }
+      ]
+    }
+  }

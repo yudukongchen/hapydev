@@ -1,0 +1,28 @@
+[
+  {
+    "request_id": "1",
+    "type": "api",
+    "url": "www.baidu.com",
+    "method": "GET",
+    "time": 1717338247000
+  },
+
+  {
+    "request_id": "3",
+    "type": "grpc",
+    "url": "grpc.postman-echo.com",
+    "time": 1713328247000
+  },
+  {
+    "request_id": "4",
+    "type": "websocket",
+    "url": "ws://154.221.17.249:8101?uid=10000265",
+    "time": 1717338247000
+  },
+  {
+    "request_id": "6",
+    "type": "socket_client",
+    "url": "www.baidu.com",
+    "time": 1714308247000
+  }
+]

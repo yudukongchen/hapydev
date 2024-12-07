@@ -1,0 +1,94 @@
+{
+  "id": "2",
+  "parent_id": "0",
+  "type": "test_case",
+  "name": "全是循环的用例",
+  "sort": 1,
+  "data": {
+    "iteration_data": [
+      {
+        "id": "1111",
+        "name": "测试登录接口",
+        "updated_time": 1718461890348,
+        "data": {
+          "default": [
+            {
+              "user_name": "hapydev-test",
+              "passwd": "123456"
+            },
+            {
+              "user_name": "hapydev-test",
+              "passwd": "222222"
+            }
+          ],
+          "mock": []
+        }
+      }
+    ],
+    "options": {
+      "env_id": "default",
+      "execute_count": 1,
+      "interval_time": 1,
+      "iteration_data_id": "1111",
+      "enable_sandbox": 1,
+      "save_reports": 1,
+      "exception_handler": "ingore"
+    },
+    "process": [
+      {
+        "id": "1",
+        "parent_id": "0",
+        "type": "loop",
+        "data": {
+          "loop_type": "map",
+          "map": {
+            "location": "env_variable",
+            "data": "{{user_list}}"
+          },
+          "interval_time": 0,
+          "exception_handler": "ingore"
+        },
+        "children": [
+          {
+            "id": "1-1",
+            "parent_id": "1",
+            "type": "api",
+            "data": {
+              "api_id": "api444",
+              "is_link": 1
+            },
+            "is_used": 1
+          }
+        ],
+        "is_used": 1
+      },
+      {
+        "id": "2",
+        "parent_id": "0",
+        "type": "loop",
+        "data": {
+          "loop_type": "for",
+          "for": {
+            "execute_count": 3,
+            "iteration_data_id": "1111"
+          },
+          "interval_time": 200,
+          "exception_handler": "ingore"
+        },
+        "children": [
+          {
+            "id": "2-1",
+            "parent_id": "2",
+            "type": "api",
+            "data": {
+              "api_id": "api2",
+              "is_link": 1
+            },
+            "is_used": 1
+          }
+        ],
+        "is_used": 1
+      }
+    ]
+  }
+}

@@ -1,0 +1,216 @@
+{
+  "id": "1",
+  "parent_id": "0",
+  "type": "api",
+  "url": "www.baidu.com",
+  "time": 1713338247000,
+  "data": {
+    "request": {
+      "url": "www.baidu.com",
+      "method": "GET",
+      "auth": {
+        "type": "inherit",
+        "kv": {
+          "key": "mollit in Ut",
+          "value": "quis anim cillum laborum voluptate"
+        },
+        "bearer": {
+          "key": "in exercitation anim consectetur eu"
+        },
+        "basic": {
+          "username": "万洋",
+          "password": "minim id"
+        },
+        "digest": {
+          "username": "廖芳",
+          "password": "Excepteur deserunt enim irure labore",
+          "realm": "id fugiat",
+          "nonce": "culpa magna",
+          "algorithm": "eiusmod sint velit enim",
+          "qop": "nisi cillum laboris",
+          "nc": "aute consectetur in",
+          "cnonce": "cillum",
+          "opaque": "qui incididunt cillum ea labore"
+        },
+        "hawk": {
+          "authId": "42",
+          "authKey": "adipisicing",
+          "algorithm": "incididunt",
+          "user": "Ut",
+          "nonce": "proident deserunt non anim ex",
+          "extraData": "mollit pariatur dolore do aute",
+          "app": "nostrud sint adipisicing enim",
+          "delegation": "consectetur ea ut",
+          "timestamp": "2022-12-02 05:53:03",
+          "includePayloadHash": 14
+        },
+        "awsv4": {
+          "accessKey": "cupidatat sit labore tempor",
+          "secretKey": "in sed",
+          "region": "aliquip laboris voluptate",
+          "service": "sint",
+          "sessionToken": "dolor reprehenderit consequat ipsum incididunt",
+          "addAuthDataToQuery": 46
+        },
+        "ntlm": {
+          "username": "韩敏",
+          "password": "et in",
+          "domain": "y.efn@qq.com",
+          "workstation": "Lorem ea eu",
+          "disableRetryRequest": 64
+        },
+        "edgegrid": {
+          "accessToken": "id qui minim officia",
+          "clientToken": "dolore in in magna",
+          "clientSecret": "consectetur dolor voluptate est",
+          "nonce": "magna ut consequat sit",
+          "timestamp": "1972-04-21 01:46:30",
+          "baseURi": "ea",
+          "headersToSign": "in sed fugiat nisi aute"
+        },
+        "oauth1": {
+          "consumerKey": "qui dolore voluptate labore",
+          "consumerSecret": "aute officia esse qui",
+          "signatureMethod": "elit consectetur in ad adipisicing",
+          "addEmptyParamsToSign": 43,
+          "includeBodyHash": 61,
+          "addParamsToHeader": 51,
+          "realm": "in ex",
+          "version": "minim dolor aute sunt",
+          "nonce": "sit",
+          "timestamp": "2013-05-01 07:08:30",
+          "verifier": "incididunt et mollit elit veniam",
+          "callback": "aliqua anim adipisicing",
+          "tokenSecret": "dolor ut commodo eiusmod",
+          "token": "pariatur et cupidatat Duis"
+        }
+      },
+      "headers": {
+        "sys_header": [
+          {
+            "name": "User-Agent",
+            "field_type": "String",
+            "value": "Hapydev-Runtime/1.0.0",
+            "value_type": "text",
+            "is_required": 1,
+            "is_used": 1,
+            "description": ""
+          },
+          {
+            "name": "Accept",
+            "field_type": "String",
+            "value": "*/*",
+            "value_type": "text",
+            "is_required": 1,
+            "is_used": 1,
+            "description": ""
+          },
+          {
+            "name": "Accept-Encoding",
+            "field_type": "String",
+            "value": "gzip, deflate, br",
+            "value_type": "text",
+            "is_required": 1,
+            "is_used": 1,
+            "description": ""
+          },
+          {
+            "name": "Connection",
+            "field_type": "String",
+            "value": "keep-alive",
+            "value_type": "text",
+            "is_required": 1,
+            "is_used": 1,
+            "description": ""
+          }
+        ],
+        "parameter": [
+          {
+            "name": "aaa",
+            "field_type": "String",
+            "value": "1111",
+            "value_type": "text",
+            "is_required": 1,
+            "is_used": 1,
+            "description": ""
+          }
+        ]
+      },
+      "params": {
+        "parameter": [
+          {
+            "name": "aaa",
+            "field_type": "String",
+            "value": "1111",
+            "value_type": "text",
+            "is_required": 1,
+            "is_used": 1,
+            "description": ""
+          }
+        ],
+        "restful": [
+          {
+            "name": "bbb",
+            "field_type": "String",
+            "value": "222",
+            "value_type": "text",
+            "is_required": 1,
+            "is_used": 1,
+            "description": ""
+          }
+        ]
+      },
+      "body": {
+        "mode": "none",
+        "raw_type": null,
+        "parameter": [
+          {
+            "name": "User-Agent",
+            "field_type": "String",
+            "value": "Hapydev-Runtime/1.0.0",
+            "value_type": "text",
+            "is_required": 1,
+            "is_used": 1,
+            "description": ""
+          }
+        ],
+        "raw": "reprehenderit consequat",
+        "raw_para": [
+          "occaecat eiusmod Lorem fugiat culpa"
+        ],
+        "raw_schema": {
+          "type": "laboris dolore nostrud ad"
+        },
+        "binary": null
+      },
+      "cookies": [
+        {
+          "name": "User-Agent",
+          "field_type": "String",
+          "value": "Hapydev-Runtime/1.0.0",
+          "value_type": "text",
+          "is_required": 1,
+          "is_used": 1,
+          "description": ""
+        }
+      ],
+      "pre_tasks": [
+        {
+          "type": "customScript",
+          "enabled": 74,
+          "data": "",
+          "id": "34"
+        }
+      ],
+      "post_tasks": [
+        {
+          "type": "customScript",
+          "enabled": 74,
+          "data": "let template = ` \n<h1>{{title}}</h1><table><tr><td>新闻ID</td><td>标题</td></tr>\n{{each list item}}\n<tr><td>{{item.article_id}}</td><td>{{item.title}}</td></tr>\n{{/each}}\n</table>`;\n pm.Visualizing(template, {title: \"可视化演示\",list: [{ article_id: \"1\", title: \"2222\" },{ article_id: \"2\", title: \"333\" },],});",
+          "id": "34"
+        }
+      ]
+    },
+    "response": null
+  }
+}
