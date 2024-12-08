@@ -26,9 +26,6 @@
 - HTTP接口调试
 <p align="center"><img src="src/assets/products/1.png" width="100%"  /></p>
 
-- HTTP接口预览
-<p align="center"><img src="src/assets/products/2.png" width="100%" /></p>
-
 - gRpc接口调试
 <p align="center"><img src="src/assets/products/3.png" width="100%" /></p>
 
@@ -40,9 +37,6 @@
 
 - 支持零代码实现复杂的自动化测试
 <p align="center"><img src="src/assets/products/6.png" width="100%" /></p>
-
-- 支持项目管理
-<p align="center"><img src="src/assets/products/7.png" width="100%" /></p>
 
 - 支持多种个性主题定制
 <p align="center"><img src="src/assets/products/8.png" width="100%" /></p>
