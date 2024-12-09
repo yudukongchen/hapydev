@@ -52,7 +52,7 @@
   $ npm start
   ```
 
-- 第2步，安装请求代理
+- 第2步，安装调试应用程序
 
   ```bash
   $ git clone git@github.com:hapydev-team/hapydev.git
