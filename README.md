@@ -63,6 +63,20 @@
   $ npm start
   ```
 
+- 第3步，安装后端API服务（非必需）
+
+  ```bash
+  $ git clone git@github.com:hapydev-team/hapydev-server.git
+  $ cd hapydev-server
+  $ npm install
+
+  #手动配置.env好环境变量后，继续运行下方脚本
+
+
+  $ npm run gen
+  $ npm start
+  ```
+
 然后打开浏览器访问 http://127.0.0.1:8000 ,
 
 ## 账户和订阅
