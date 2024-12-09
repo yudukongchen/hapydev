@@ -14,7 +14,7 @@
     "url": "git+https://github.com/hapydev-team/hapydev.git"
   },
   "author": "hapydev",
-  "license": "Apache-2.0",
+  "license": "Hapydev开源许可协议",
   "bugs": {
     "url": "https://github.com/hapydev-team/hapydev/issues"
   },

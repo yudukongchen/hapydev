@@ -1,201 +1,85 @@
-                                 Apache License
-                           Version 2.0, January 2004
-                        http://www.apache.org/licenses/
+# 《Hapydev开源许可协议》
 
-   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+重要须知：在此特别提醒用户认真阅读、充分理解本协议，用户应认真阅读、充分理解本协议中各条款，包括免除或限制的免责条款以及对用户的权利限制条款。用户需审慎阅读并选择接受或不接受本协议，除非用户接受本协议所有条款，否则用户无权安装或使用本软件及相关服务。用户的安装、使用、登录等行为将视为对本协议的接受，并同意接受本协议各项条款的约束。
 
-   1. Definitions.
+## 名词定义：
 
-      "License" shall mean the terms and conditions for use, reproduction,
-      and distribution as defined by Sections 1 through 9 of this document.
+- 用户：通过Hapydev授权获得Hapydev及使用Hapydev相关服务的自然人、法人及其他组织
 
-      "Licensor" shall mean the copyright owner or entity authorized by
-      the copyright owner that is granting the License.
+- Hapydev：Hapydev(主体: 江西快犇信息科技有限公司)
 
-      "Legal Entity" shall mean the union of the acting entity and all
-      other entities that control, are controlled by, or are under common
-      control with that entity. For the purposes of this definition,
-      "control" means (i) the power, direct or indirect, to cause the
-      direction or management of such entity, whether by contract or
-      otherwise, or (ii) ownership of fifty percent (50%) or more of the
-      outstanding shares, or (iii) beneficial ownership of such entity.
+- 用户许可定义：用户在基于明显的用途说明后主动安装、使用、注册、管理软件，以及同意Hapydev提供相关服务所订立的协议
 
-      "You" (or "Your") shall mean an individual or Legal Entity
-      exercising permissions granted by this License.
+## 一、Hapydev需遵守的约定
 
-      "Source" form shall mean the preferred form for making modifications,
-      including but not limited to software source code, documentation
-      source, and configuration files.
+1.1 除付费模块外，确保所有代码用户皆可阅读。
 
-      "Object" form shall mean any form resulting from mechanical
-      transformation or translation of a Source form, including but
-      not limited to compiled object code, generated documentation,
-      and conversions to other media types.
+1.2 确保用户在完成所有环境部署后，在不依赖Hapydev云端支持下也可永久运行。
 
-      "Work" shall mean the work of authorship, whether in Source or
-      Object form, made available under the License, as indicated by a
-      copyright notice that is included in or attached to the work
-      (an example is provided in the Appendix below).
+1.3 除付费授权相关模块外，禁止对源代码进行加密和混淆。
 
-      "Derivative Works" shall mean any work, whether in Source or Object
-      form, that is based on (or derived from) the Work and for which the
-      editorial revisions, annotations, elaborations, or other modifications
-      represent, as a whole, an original work of authorship. For the purposes
-      of this License, Derivative Works shall not include works that remain
-      separable from, or merely link (or bind by name) to the interfaces of,
-      the Work and Derivative Works thereof.
+1.4 禁止不经用户许可的情况下以任何方式自动安装加密代码。
 
-      "Contribution" shall mean any work of authorship, including
-      the original version of the Work and any modifications or additions
-      to that Work or Derivative Works thereof, that is intentionally
-      submitted to Licensor for inclusion in the Work by the copyright owner
-      or by an individual or Legal Entity authorized to submit on behalf of
-      the copyright owner. For the purposes of this definition, "submitted"
-      means any form of electronic, verbal, or written communication sent
-      to the Licensor or its representatives, including but not limited to
-      communication on electronic mailing lists, source code control systems,
-      and issue tracking systems that are managed by, or on behalf of, the
-      Licensor for the purpose of discussing and improving the Work, but
-      excluding communication that is conspicuously marked or otherwise
-      designated in writing by the copyright owner as "Not a Contribution."
+1.5 禁止不经用户许可的情况下以任何方式收集用户数据。
 
-      "Contributor" shall mean Licensor and any individual or Legal Entity
-      on behalf of whom a Contribution has been received by Licensor and
-      subsequently incorporated within the Work.
+1.6 禁止不经用户许可的情况下以任何方式远程控制用户客户端。
 
-   2. Grant of Copyright License. Subject to the terms and conditions of
-      this License, each Contributor hereby grants to You a perpetual,
-      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
-      copyright license to reproduce, prepare Derivative Works of,
-      publicly display, publicly perform, sublicense, and distribute the
-      Work and such Derivative Works in Source or Object form.
+1.7 禁止在用户客户端上插入与Hapydev无关的广告。
 
-   3. Grant of Patent License. Subject to the terms and conditions of
-      this License, each Contributor hereby grants to You a perpetual,
-      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
-      (except as stated in this section) patent license to make, have made,
-      use, offer to sell, sell, import, and otherwise transfer the Work,
-      where such license applies only to those patent claims licensable
-      by such Contributor that are necessarily infringed by their
-      Contribution(s) alone or by combination of their Contribution(s)
-      with the Work to which such Contribution(s) was submitted. If You
-      institute patent litigation against any entity (including a
-      cross-claim or counterclaim in a lawsuit) alleging that the Work
-      or a Contribution incorporated within the Work constitutes direct
-      or contributory patent infringement, then any patent licenses
-      granted to You under this License for that Work shall terminate
-      as of the date such litigation is filed.
+1.8 禁止将Hapydev官方提供的免费功能改为付费功能。
 
-   4. Redistribution. You may reproduce and distribute copies of the
-      Work or Derivative Works thereof in any medium, with or without
-      modifications, and in Source or Object form, provided that You
-      meet the following conditions:
+## 二、用户需遵守的约定
 
-      (a) You must give any other recipients of the Work or
-          Derivative Works a copy of this License; and
+2.1 以自用为目的，可将Hapydev用于盈利或非盈利项目上，且不受任何限制。
 
-      (b) You must cause any modified files to carry prominent notices
-          stating that You changed the files; and
+2.2 以自用为目的，在保留版权标识的前提下可任意修改程序源码，但不得公开发行。
 
-      (c) You must retain, in the Source form of any Derivative Works
-          that You distribute, all copyright, patent, trademark, and
-          attribution notices from the Source form of the Work,
-          excluding those notices that do not pertain to any part of
-          the Derivative Works; and
+2.3 禁止以任何方式破坏Hapydev的商业授权机制（包括但不限于收集Hapydev源码后经营与Hapydev同类型、同性质服务等）。
 
-      (d) If the Work includes a "NOTICE" text file as part of its
-          distribution, then any Derivative Works that You distribute must
-          include a readable copy of the attribution notices contained
-          within such NOTICE file, excluding those notices that do not
-          pertain to any part of the Derivative Works, in at least one
-          of the following places: within a NOTICE text file distributed
-          as part of the Derivative Works; within the Source form or
-          documentation, if provided along with the Derivative Works; or,
-          within a display generated by the Derivative Works, if and
-          wherever such third-party notices normally appear. The contents
-          of the NOTICE file are for informational purposes only and
-          do not modify the License. You may add Your own attribution
-          notices within Derivative Works that You distribute, alongside
-          or as an addendum to the NOTICE text from the Work, provided
-          that such additional attribution notices cannot be construed
-          as modifying the License.
+2.4 用户禁止利用Hapydev发表、传送、传播、储存违反国家法律、危害国家安全、社会稳定、公序良俗的内容，或任何不当的、侮辱诽谤的、淫秽的、暴力的及任何违反国家法律法规政策的内容。
 
-      You may add Your own copyright statement to Your modifications and
-      may provide additional or different license terms and conditions
-      for use, reproduction, or distribution of Your modifications, or
-      for any such Derivative Works as a whole, provided Your use,
-      reproduction, and distribution of the Work otherwise complies with
-      the conditions stated in this License.
+2.5 用户禁止利用Hapydev制作、发布、传播用户窃取相关或其他软件及他人专属信息、财产的软件。
 
-   5. Submission of Contributions. Unless You explicitly state otherwise,
-      any Contribution intentionally submitted for inclusion in the Work
-      by You to the Licensor shall be under the terms and conditions of
-      this License, without any additional terms or conditions.
-      Notwithstanding the above, nothing herein shall supersede or modify
-      the terms of any separate license agreement you may have executed
-      with Licensor regarding such Contributions.
+## 三、插件使用约定
 
-   6. Trademarks. This License does not grant permission to use the trade
-      names, trademarks, service marks, or product names of the Licensor,
-      except as required for reasonable and customary use in describing the
-      origin of the Work and reproducing the content of the NOTICE file.
+3.1 Hapydev欢迎并感谢您为该软件开发基于hapydev的各种插件，且可自行免费或收费发布。
 
-   7. Disclaimer of Warranty. Unless required by applicable law or
-      agreed to in writing, Licensor provides the Work (and each
-      Contributor provides its Contributions) on an "AS IS" BASIS,
-      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
-      implied, including, without limitation, any warranties or conditions
-      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
-      PARTICULAR PURPOSE. You are solely responsible for determining the
-      appropriateness of using or redistributing the Work and assume any
-      risks associated with Your exercise of permissions under this License.
+3.2 用户基于Hapydev开发的插件，不得包含有破坏或修改Hapydev代码。
 
-   8. Limitation of Liability. In no event and under no legal theory,
-      whether in tort (including negligence), contract, or otherwise,
-      unless required by applicable law (such as deliberate and grossly
-      negligent acts) or agreed to in writing, shall any Contributor be
-      liable to You for damages, including any direct, indirect, special,
-      incidental, or consequential damages of any character arising as a
-      result of this License or out of the use or inability to use the
-      Work (including but not limited to damages for loss of goodwill,
-      work stoppage, computer failure or malfunction, or any and all
-      other commercial damages or losses), even if such Contributor
-      has been advised of the possibility of such damages.
+## 四、无改动发布或集成Hapydev
 
-   9. Accepting Warranty or Additional Liability. While redistributing
-      the Work or Derivative Works thereof, You may choose to offer,
-      and charge a fee for, acceptance of support, warranty, indemnity,
-      or other liability obligations and/or rights consistent with this
-      License. However, in accepting such obligations, You may act only
-      on Your own behalf and on Your sole responsibility, not on behalf
-      of any other Contributor, and only if You agree to indemnify,
-      defend, and hold each Contributor harmless for any liability
-      incurred by, or claims asserted against, such Contributor by reason
-      of your accepting any such warranty or additional liability.
+4.1 Hapydev欢迎并感谢您将Hapydev发布在您的个人网站、企业官网或者其他的第三方网站。
 
-   END OF TERMS AND CONDITIONS
+4.2 Hapydev欢迎并感谢您将Hapydev集成在其他系统中一起发布，包括云服务镜像、操作系统发行版等。
 
-   APPENDIX: How to apply the Apache License to your work.
+4.3 用户在发布或者集成Hapydev的时候，不得对Hapydev源码做任何改动。
 
-      To apply the Apache License to your work, attach the following
-      boilerplate notice, with the fields enclosed by brackets "[]"
-      replaced with your own identifying information. (Don't include
-      the brackets!)  The text should be enclosed in the appropriate
-      comment syntax for the file format. We also recommend that a
-      file or class name and description of purpose be included on the
-      same "printed page" as the copyright notice for easier
-      identification within third-party archives.
+## 五、知识产权声明
 
-   Copyright [yyyy] [name of copyright owner]
+Hapydev是由江西快犇信息科技有限公司开发，Hapydev的知识产权以及与Hapydev相关的所有信息内容，包括但不限于：文字、图形、界面设计、版面框架、有关数据均受中华人民共和国相关知识产权法律法规的保护，除涉及第三方授权的内容外，Hapydev公司享有上述知识产权。
 
-   Licensed under the Apache License, Version 2.0 (the "License");
-   you may not use this file except in compliance with the License.
-   You may obtain a copy of the License at
+## 六、免责声明
 
-       http://www.apache.org/licenses/LICENSE-2.0
+6.1 用户出于自愿而使用Hapydev，您必须了解使用本软件的风险，Hapydev不作任何类型的担保，不论是明示的、默示的，包括但不限于用户在任何情况下因使用或不能使用Hapydev所产生的直接、间接、偶然、特殊及后续的损害及风险，Hapydev公司不承担任何责任。
 
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   See the License for the specific language governing permissions and
-   limitations under the License.
+6.2 用户清楚互联网软件的特殊性，Hapydev与大多数互联网软件一样，受包括但不限于用户原因、网络服务质量、社会环境等因素的影响，可能受到各种安全问题的侵扰，如用户下载安装的其他软件或访问的其他网站中含有“木马”等病毒，威胁到用户的计算机信息和数据的安全，继而影响Hapydev的正常使用等，用户应加强信息安全及使用资料的保护，以免遭受损失
+
+6.3 Hapydev界面中“第三方应用”是Hapydev获得了第三方合法授权的，如因用户使用第三方软件或技术引发的任何纠纷，由第三方负责解决，Hapydev不对第三方软件或技术提供服务，若用户需要获得支持，请与该第三方联系。
+
+6.4 用户因使用Hapydev违反国家法律法规的，Hapydev公司不承担任何责任。
+
+## 七、授权例外
+
+7.1 如果上述条款无法满足您使用该软件的要求，可联系Hapydev签署额外的合同以获得更灵活的授权许可。
+
+## 八、合同终止
+
+8.1 如果用户违反了本协议的任一条款，本授权协议将自动终止，用户行为损害Hapydev或其他任意第三方权利的，Hapydev保留通过法律手段追究责任的权利。
+
+## 九、其他条款
+
+9.1 本协议约定的任何条款部分或完全无效的，不影响其他条款的效力。
+
+9.2 协议的解释、效力及纠纷的解决使用中华人民共和国法律，若用户和Hapydev发生任何纠纷或争议，首先应当友好协商解决，协商不成的，用户完全同意将该纠纷或争议提交至Hapydev所在地即江西省九江市有管辖权的法院管辖。
+
+9.3 本协议Hapydev保留一切解释权利
