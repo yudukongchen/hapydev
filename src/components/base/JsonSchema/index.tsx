@@ -1,14 +1,12 @@
-import { SchemaWrapper } from './style';
-import { theme } from 'antd';
-
-const Template = () => {
-  const { token } = theme.useToken();
-
+const Page = () => {
   return (
-    <SchemaWrapper token={token}>
-      <div>开源版暂不提供此功能</div>
-    </SchemaWrapper>
+    <div>
+      抱歉，开源版暂不支持此功能，使用完整功能请选择
+      <a href="https://www.hapydev.com?utm_source=git-open" target="_blank">
+        正式版
+      </a>
+    </div>
   );
 };
 
-export default Template;
+export default Page;
