@@ -1,7 +1,7 @@
 {
   "name": "hapydev",
   "version": "1.0.0",
-  "description": "一体化API调试工具，自动化测试|Mock|抓包|UI自动化调试",
+  "description": "一体化API调试工具，自动化测试|UI自动化调试|(支持Postman，Apifox等多种数据导入)",
   "main": "index.js",
   "scripts": {
     "start": "vite --mode development",
