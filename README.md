@@ -101,4 +101,4 @@ Hapydev开源版与免费版，可以满足大多数企业与个人用户需求�
 
 - 微信群：
 
-![](src/assets/products/contact-wechat.png)
+<p align="left"><img src="src/assets/products/contact-wechat.png" width="200"  /></p>
