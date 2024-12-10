@@ -25,6 +25,9 @@
 
 ## 快速预览产品
 
+- 产品体验地址
+  https://app.hapydev.com/
+
 - HTTP接口调试
 <p align="center"><img src="src/assets/products/1.png" width="100%"  /></p>
 
