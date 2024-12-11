@@ -99,6 +99,6 @@ Hapydev开源版与免费版，可以满足大多数企业与个人用户需求�
 
 如果您希望和 Hapydev 团队近距离交流，讨论产品使用技巧以及了解产品最新进展，欢迎加入以下渠道。
 
-- 微信群：
+- 扫客服小二微信加群：（备注：hapydev技术交流）
 
 <p align="left"><img src="src/assets/products/contact-wechat.png" width="200"  /></p>
