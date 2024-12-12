@@ -7,6 +7,8 @@
     "start": "vite --mode development",
     "build": "vite build",
     "preview": "vite preview --open",
+    "serve": "vite ",
+    "start:server": "pm2 reload pm2.conf.json",
     "prettier": "prettier --write src/**/*.{ts,tsx,json}"
   },
   "repository": {
