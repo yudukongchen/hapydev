@@ -1,4 +1,4 @@
-import Table from '@components/base/table';
+import Table from '@components/base/Table';
 import React, { useMemo } from 'react';
 import { DEFAULT_DATA_ITEM, TABLE_COLUMNS } from './constants';
 import { VariableItem } from '#types/variables';

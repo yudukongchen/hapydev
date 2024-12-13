@@ -46,40 +46,44 @@
 - 支持多种个性主题定制
 <p align="center"><img src="src/assets/products/8.png" width="100%" /></p>
 
-## 免费开始
+## 快速开始
 
+### 开发模式安装
 - 第1步，安装请求代理
 
   ```bash
-  $ git clone git@github.com:hapydev-team/hapydev-proxy.git
-  $ cd hapydev-proxy
-  $ npm install
-  $ npm start
+   git clone git@github.com:hapydev-team/hapydev-proxy.git
+   cd hapydev-proxy
+   npm install
+   npm start
   ```
 
 - 第2步，安装后端API服务（非必需）
 
   ```bash
-  $ git clone git@github.com:hapydev-team/hapydev-server.git
-  $ cd hapydev-server
+   git clone git@github.com:hapydev-team/hapydev-server.git
+   cd hapydev-server
 
   #手动配置.env好Mysql,minio,短信等环境变量后，继续运行下方脚本
 
-  $ npm install
-  $ npm run gen
-  $ npm start
+   npm install
+   npm run gen
+   npm start
   ```
 
 - 第3步，安装调试应用程序
 
   ```bash
-  $ git clone git@github.com:hapydev-team/hapydev.git
-  $ cd hapydev
-  $ npm install
-  $ npm start
+   git clone git@github.com:hapydev-team/hapydev.git
+   cd hapydev
+   npm install
+   npm start
   ```
 
 然后打开浏览器访问 http://127.0.0.1:8000 ,
+
+### docker方式安装
+
 
 ## 账户和订阅
 

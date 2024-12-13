@@ -5,11 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start": "vite --mode development",
+    "start:docker": "docker-compose up -d",
     "build": "vite build",
-    "preview": "vite preview --open",
-    "serve": "vite ",
-    "start:server": "pm2 reload pm2.conf.json",
-    "prettier": "prettier --write src/**/*.{ts,tsx,json}"
+    "build:docker": "docker build -t hapydev/hapydev:1.0.0 .",
+    "push:docker": "docker push hapydev/hapydev:1.0.0"
   },
   "repository": {
     "type": "git",

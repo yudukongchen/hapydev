@@ -1,6 +1,6 @@
 import { DataItem } from '#types/dataItem';
 import React from 'react';
-import Table from '@components/base/table';
+import Table from '@components/base/Table';
 import { TABLE_COLUMNS } from './constants';
 import { useMemoizedFn } from 'ahooks';
 import produce from 'immer';
