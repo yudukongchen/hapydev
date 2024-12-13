@@ -7,8 +7,8 @@
     "start": "vite --mode development",
     "start:docker": "docker-compose up -d",
     "build": "vite build",
-    "build:docker": "docker build -t hapydev/hapydev:1.0.0 .",
-    "push:docker": "docker push hapydev/hapydev:1.0.0"
+    "build:pre-docker": "docker buildx create --name mybuilder --use",
+    "build:docker": "docker buildx build --push --platform linux/amd64,linux/arm64  -t hapydev/hapydev:latest  ."
   },
   "repository": {
     "type": "git",

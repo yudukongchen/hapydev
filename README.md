@@ -84,6 +84,14 @@
 
 ### docker方式安装
 
+-  安装调试应用程序
+   ```bash
+   docker pull hapydev/hapydev
+   docker run -d -p 80:80 hapydev/hapydev
+    ```
+  然后打开浏览器访问 http://您的IP,
+-  安装请求代理(正在完善中) 
+
 
 ## 账户和订阅
 
