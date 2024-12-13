@@ -3,15 +3,20 @@ import { OpenApiWrapper } from './style';
 import SvgInfo from '@assets/icons/info.svg?react';
 import SvgTerminal from '@assets/icons/terminal.svg?react';
 import { emitGlobal } from '@subjects/global';
+import { useDispatch } from 'react-redux';
+import { updateWorkspace } from '@reducers/workspace';
 
 const OpenApi = () => {
   const { token } = theme.useToken();
+  const dispatch = useDispatch();
 
   const handleGoOpenApi = () => {
     emitGlobal('MAIN/updateActiveTab', 'project');
-    setTimeout(() => {
-      emitGlobal('PROJECT/updateActivePage', 'open-api');
-    }, 0);
+    dispatch(
+      updateWorkspace({
+        project_active_page: 'open-api',
+      })
+    );
   };
 
   return (

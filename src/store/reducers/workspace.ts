@@ -8,6 +8,7 @@ export const workspaceSlice = createSlice({
     current_env_id: 'dev', //当前环境id
     current_model_name: null, //当前展示的弹窗名称
     current_model_props: null, //当前展示的弹窗名称
+    project_active_page: 'base', //项目管理被选择二级菜单
   },
   reducers: {
     updateWorkspace(state, action) {

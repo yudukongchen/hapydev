@@ -9,6 +9,8 @@ import { emitGlobal } from '@subjects/global';
 import CurlImport from './curl-import';
 import SvgExpand from '@assets/icons/expand-all2.svg?react';
 import SvgFold from '@assets/icons/fold-all2.svg?react';
+import { useDispatch } from 'react-redux';
+import { updateWorkspace } from '@reducers/workspace';
 
 type Props = {
   value: any;
@@ -17,6 +19,8 @@ type Props = {
   onToggleExpandAll: () => void;
 };
 const Header: React.FC<Props> = (props) => {
+  const dispatch = useDispatch();
+
   const { value, onChange, showAll, onToggleExpandAll } = props;
   const [modal, setModal] = useSafeState(null);
 
@@ -33,6 +37,12 @@ const Header: React.FC<Props> = (props) => {
 
   const handleCreateApi = ({ key }) => {
     if (key === 'project') {
+      emitGlobal('MAIN/updateActiveTab', 'project');
+      dispatch(
+        updateWorkspace({
+          project_active_page: 'data-import',
+        })
+      );
       return;
     }
     if (key === 'curl') {
