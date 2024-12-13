@@ -8,10 +8,9 @@ import AddServer from './addServer';
 import ModifyServer from './modifyServer';
 import ItemMenu from './itemMenu';
 import { EnvironmentItem } from '#types/environment';
-import Table from '@components/base/table';
+import Table from '@components/base/Table';
 import { Button, Input, message, theme } from 'antd';
 import SvgAdd from '@assets/icons/add.svg?react';
-import { removeServer } from '@reducers/envs';
 import { deleteServers, saveServers } from '@bll/projects/servers';
 import { emitGlobal } from '@subjects/global';
 
