@@ -83,14 +83,23 @@
 然后打开浏览器访问 http://127.0.0.1:8000 ,
 
 ### docker方式安装
+-  安装请求代理
+     ```bash
+       docker pull hapydev/hapydev-proxy
+       docker run -d -p 6003:6003 hapydev/hapydev-proxy
+      ```
+打开浏览器访问 http://ip:6003 ,显示“hapydev代理已启动!”即为安装成功
 
 -  安装调试应用程序
    ```bash
    docker pull hapydev/hapydev
    docker run -d -p 80:80 hapydev/hapydev
     ```
-  然后打开浏览器访问 http://您的IP,
--  安装请求代理(正在完善中) 
+  然后打开浏览器访问 http://ip, 进行访问
+
+
+
+
 
 
 ## 账户和订阅
