@@ -28,28 +28,28 @@ const About = () => {
         </div>
         <div className="info-item">
           <Button
-            href={`${import.meta.env.VITE_PUBLIC_PATH}/register/protocol`}
+            href={`${import.meta.env.VITE_BASE_URL}/register/protocol`}
             target="_blank"
             type="link"
           >
             帮助中心
           </Button>
           <Button
-            href={`${import.meta.env.VITE_PUBLIC_PATH}/register/protocol`}
+            href={`${import.meta.env.VITE_BASE_URL}/register/protocol`}
             target="_blank"
             type="link"
           >
             更新日志
           </Button>
           <Button
-            href={`${import.meta.env.VITE_PUBLIC_PATH}/register/protocol`}
+            href={`${import.meta.env.VITE_BASE_URL}/register/protocol`}
             target="_blank"
             type="link"
           >
             服务协议
           </Button>
           <Button
-            href={`${import.meta.env.VITE_PUBLIC_PATH}/register/protocol`}
+            href={`${import.meta.env.VITE_BASE_URL}/register/protocol`}
             target="_blank"
             type="link"
           >

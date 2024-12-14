@@ -82,7 +82,7 @@
 
 然后打开浏览器访问 http://127.0.0.1:8000 ,
 
-### docker方式安装
+### Docker方式安装
 -  安装请求代理
      ```bash
        docker pull hapydev/hapydev-proxy

@@ -8,6 +8,7 @@
     "start:docker": "docker-compose up -d",
     "build": "vite build",
     "build:pre-docker": "docker buildx create --name mybuilder --use",
+    "preview:docker": "docker build -t hapydev/hapydev:latest  .",
     "build:docker": "docker buildx build --push --platform linux/amd64,linux/arm64  -t hapydev/hapydev:latest  ."
   },
   "repository": {

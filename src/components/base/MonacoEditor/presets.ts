@@ -1,5 +1,6 @@
 import { loader } from '@monaco-editor/react';
-let fileurl = `${import.meta.env.VITE_PUBLIC_PATH}/scripts/monaco-editor/min/vs`;
+import { getPublicPath } from '@utils/path';
+let fileurl = `${getPublicPath()}/scripts/monaco-editor/min/vs`;
 loader.config({
   paths: { vs: fileurl },
   'vs/nls': {

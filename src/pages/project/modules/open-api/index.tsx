@@ -48,7 +48,7 @@ const OpenApi = () => {
           <div>
             通过 Open API 可以访问您在 Hapydev 中的项目数据，访问API需要携带
             API_token，您可以根据不同用途，生成不同的API_token。
-            <a onClick={openUrl.bind(null, `${import.meta.env.VITE_HOME_URL}/open-api`)}>
+            <a onClick={openUrl.bind(null, `${import.meta.env.VITE_HOME_URL}/docs/open-api`)}>
               点此查看 OpenAPI 文档
             </a>
           </div>

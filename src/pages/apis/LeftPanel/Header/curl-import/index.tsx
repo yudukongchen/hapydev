@@ -6,8 +6,9 @@ import webCurlToHar, { setConfig } from 'curl2hars';
 import { parseCookie, parseSafeBash } from './utils';
 import { isEmpty, isPlainObject } from 'lodash';
 import { hartoHapydev } from '@utils/tools/har-hapydev';
+import { getPublicPath } from '@utils/path';
 
-setConfig(`${import.meta.env.VITE_PUBLIC_PATH}/assets/`);
+setConfig(`${getPublicPath()}/assets/`);
 
 type Props = {
   open: boolean;
