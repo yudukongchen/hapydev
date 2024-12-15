@@ -83,18 +83,31 @@
 然后打开浏览器访问 http://127.0.0.1:8000 ,
 
 ### Docker方式安装
--  安装请求代理
-     ```bash
-       docker pull hapydev/hapydev-proxy
-       docker run -d -p 6003:6003 hapydev/hapydev-proxy
-      ```
-打开浏览器访问 http://ip:6003 ,显示“hapydev代理已启动!”即为安装成功
+- 第1步，安装请求代理
+  
+  ```bash
+  docker pull hapydev/hapydev-proxy
+  docker run -d -p 6003:6003 hapydev/hapydev-proxy
+  ```
+    
+  打开浏览器访问 http://ip:6003 ,显示“hapydev代理已启动!”即为安装成功
 
--  安装调试应用程序
-   ```bash
-   docker pull hapydev/hapydev
-   docker run -d -p 80:80 hapydev/hapydev
-    ```
+- 第2步，安装调试应用程序
+  
+  ```bash
+  docker pull hapydev/hapydev
+  docker run -d -p 80:80 hapydev/hapydev
+  ```
+
+  支持动态传入环境变量
+
+  |  变量名称   | 变量描述  |  变量默认值   |
+  |  ----  | ----  |  ----  |
+  | BASE_URL  | Web应用实际ip地址 | 'http://127.0.0.1:8000'  |
+  | CLOUD_PROXY_URL  | 云端代理地址 | 'http://127.0.0.1:6003'  |
+  | API_HOST_URL  | api服务地址 | 'http://127.0.0.1:6002/api/v1.0'  |
+  | DOC_HOST_URL  | 文档访问地址 | 'http://127.0.0.1:6004'  |
+
   然后打开浏览器访问 http://ip, 进行访问
 
 

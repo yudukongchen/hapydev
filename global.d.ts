@@ -5,6 +5,10 @@ declare interface Window {
   cloud_proxy: any; // 云端代理
   Terminal: any;
   electron: any;
+  CLOUD_PROXY_URL: string;
+  BASE_URL: string;
+  API_HOST_URL: string;
+  DOC_HOST_URL: string;
 }
 
 declare module '*.png' {

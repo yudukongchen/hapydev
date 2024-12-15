@@ -10,6 +10,7 @@ import { useEffect } from 'react';
 import { getUserProfileByTokenRequest, resetPasswordRequest } from '@services/help';
 import { isNull } from 'lodash';
 import { removeCookie } from '@utils/cookies';
+import { getBaseUrl } from '@utils/path';
 
 const Register = () => {
   const { token } = theme.useToken();
@@ -56,7 +57,7 @@ const Register = () => {
         removeCookie('accessToken');
         removeCookie('refreshToken');
         setTimeout(() => {
-          location.href = `${import.meta.env.VITE_BASE_URL}?user-login`;
+          location.href = `${getBaseUrl()}?user-login`;
         }, 1500);
       },
       error(err) {

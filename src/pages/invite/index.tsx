@@ -10,11 +10,15 @@ import useUser from '@hooks/useGlobal/modules/user';
 import useLogin from '@hooks/modules/useLogin';
 import { useGlobalSubject } from '@hooks/useSubject';
 import { acceptInvitesRequest } from '@services/invites';
+import { getBaseUrl } from '@utils/path';
 
 const InvitePage = () => {
   const { token } = theme.useToken();
 
   const [modal, setModal] = useSafeState(null);
+
+  const baseUrl = getBaseUrl();
+
   useUser();
   const isLogin = useLogin();
   const { inviteInfo } = useInviteInfo();
@@ -36,7 +40,7 @@ const InvitePage = () => {
           message.error(resp?.message);
           return;
         }
-        location.href = `${import.meta.env.VITE_BASE_URL}`;
+        location.href = `${baseUrl}`;
       },
       error(err) {
         message.error(err?.toString());
@@ -84,7 +88,7 @@ const InvitePage = () => {
       <div className="footer">
         <a href={`${import.meta.env.VITE_HOME_URL}/downloads`}>下载桌面版</a>
         <span className="split">|</span>
-        <a href={`${import.meta.env.VITE_BASE_URL}`}>Web版</a>
+        <a href={`${baseUrl}`}>Web版</a>
         <span className="split">|</span>
         <a href={`${import.meta.env.VITE_HOME_URL}/docs`}>帮助文档</a>
         <span className="split">|</span>

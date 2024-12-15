@@ -10,6 +10,7 @@ import { Invite } from './type';
 import { createInvitesRequest } from '@services/invites';
 import { copyTextToClipboard } from '@utils/copy';
 import useTeamProjects from '@hooks/useTeamProjects';
+import { getBaseUrl } from '@utils/path';
 
 type Props = {
   team_id: string;
@@ -53,7 +54,7 @@ const InviteUsers: React.FC<Props> = (props) => {
           message.error(resp?.message);
           return;
         }
-        const text = `${import.meta.env.VITE_BASE_URL}/invite?token=${resp?.data?.token}`;
+        const text = `${getBaseUrl()}/invite?token=${resp?.data?.token}`;
         copyTextToClipboard(text);
         onClose();
       },
@@ -85,7 +86,7 @@ const InviteUsers: React.FC<Props> = (props) => {
             className="txt-url"
             readOnly
             disabled
-            value={`${import.meta.env.VITE_BASE_URL}/invite?token=*******`}
+            value={`${getBaseUrl()}/invite?token=*******`}
           />
         </div>
         <div className="url-desc">

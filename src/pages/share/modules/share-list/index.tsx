@@ -11,6 +11,7 @@ import AddPanel from '@modals/create-share';
 import ModifyPanel from '@modals/create-share/modify';
 import { copyTextToClipboard } from '@utils/copy';
 import { urljoins } from 'urljoins';
+import { getDocHost } from '@utils/path';
 
 const Notice = () => {
   const { token } = theme.useToken();
@@ -27,7 +28,7 @@ const Notice = () => {
   });
 
   const handleCopyLink = useMemoizedFn((id) => {
-    const url = urljoins(import.meta.env.VITE_DOC_HOST, id);
+    const url = urljoins(getDocHost(), id);
     copyTextToClipboard(url);
   });
 

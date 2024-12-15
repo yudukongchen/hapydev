@@ -16,6 +16,7 @@ import { copyTextToClipboard } from '@utils/copy';
 import { useSafeState } from 'ahooks';
 import { deleteShares } from '@bll/projects/shares';
 import { urljoins } from 'urljoins';
+import { getDocHost } from '@utils/path';
 
 const ShareInfo = () => {
   const { token } = theme.useToken();
@@ -40,7 +41,7 @@ const ShareInfo = () => {
 
   const handleAction = (item, { key }) => {
     if (key === 'copy-link') {
-      const url = urljoins(import.meta.env.VITE_DOC_HOST, item?.id);
+      const url = urljoins(getDocHost(), item?.id);
       copyTextToClipboard(url);
       return;
     }

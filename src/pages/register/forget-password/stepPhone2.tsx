@@ -5,6 +5,7 @@ import React from 'react';
 import { FindData } from './type';
 import { verifySmsCodeRequest } from '@services/help';
 import { useNavigate } from 'react-router-dom';
+import { getBaseUrl } from '@utils/path';
 
 type Props = {
   step: string;
@@ -14,6 +15,7 @@ type Props = {
 const Step1: React.FC<Props> = (props) => {
   const { step, setStep, data } = props;
   const navigate = useNavigate();
+  const baseUrl = getBaseUrl();
 
   const { token } = theme.useToken();
 
@@ -29,7 +31,7 @@ const Step1: React.FC<Props> = (props) => {
           message.error(resp?.message);
           return;
         }
-        location.href = `${import.meta.env.VITE_BASE_URL}/register/new-password?token=${resp?.data}`;
+        location.href = `${baseUrl}/register/new-password?token=${resp?.data}`;
       },
       error(err) {
         message.error(err?.toString());

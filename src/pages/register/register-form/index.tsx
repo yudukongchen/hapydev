@@ -12,12 +12,14 @@ import { registerUserRequest } from '@services/users';
 import randomName from './random-nick-name';
 import Header from '../header';
 import { RegisterWrapper } from '../style';
+import { getBaseUrl } from '@utils/path';
 
 const RegForm = () => {
   const { token } = theme.useToken();
 
   const [agree, setAgree] = useSafeState(true);
   const [data, setData] = useSafeState<RegisterData>(DEFAULT_REGISTER_DATA);
+  const baseUrl = getBaseUrl();
 
   const handleChange = useMemoizedFn((key, newVal) => {
     const result = produce(data, (draft) => {
@@ -58,7 +60,7 @@ const RegForm = () => {
         }
         message.success('注册成功，将自动跳转到登录页面');
         setTimeout(() => {
-          location.href = `${import.meta.env.VITE_BASE_URL}?user-login`;
+          location.href = `${baseUrl}?user-login`;
         }, 3000);
       },
       error(err) {
@@ -130,11 +132,7 @@ const RegForm = () => {
           >
             我已阅读并同意
           </Checkbox>
-          <a
-            href={`${import.meta.env.VITE_BASE_URL}/register/protocol`}
-            target="_blank"
-            className="link"
-          >
+          <a href={`${baseUrl}/register/protocol`} target="_blank" className="link">
             《Hapydev用户服务协议》
           </a>
         </div>
@@ -148,7 +146,7 @@ const RegForm = () => {
           立即注册
         </Button>
         <div className="more-items">
-          <a href={`${import.meta.env.VITE_BASE_URL}?user-login`}>已有账户，去登录</a>
+          <a href={`${baseUrl}?user-login`}>已有账户，去登录</a>
           <a href={`${import.meta.env.VITE_HOME_URL}`}>返回首页</a>
         </div>
       </RegisterForm>

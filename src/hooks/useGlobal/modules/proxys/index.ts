@@ -6,6 +6,7 @@ import useWebSocketProxy from './useWebsocket';
 import useSocketIOProxy from './useSocketIO';
 import useGrpcProxy from './useGrpc';
 import useTestingProxy from './useTesting';
+import { getProxyPath } from '@utils/path';
 
 const useProxys = () => {
   useHttpProxy();
@@ -18,7 +19,7 @@ const useProxys = () => {
   useEffect(() => {
     if (!isElectron()) {
       if (isUndefined(window.cloud_proxy)) {
-        window.cloud_proxy = window.io(import.meta.env.VITE_CLOUD_PROXY_URL, {
+        window.cloud_proxy = window.io(getProxyPath(), {
           reconnectionDelayMax: 30000,
         });
       }

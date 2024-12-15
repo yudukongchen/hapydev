@@ -1,4 +1,5 @@
 import { getCookie, removeCookie, setCookie } from '@utils/cookies';
+import { getApiHost } from '@utils/path';
 import { message } from 'antd';
 import { isString } from 'lodash';
 import { of } from 'rxjs';
@@ -14,7 +15,7 @@ const refreshToken = () => {
       }
     }),
     map((token) => ({
-      url: import.meta.env.VITE_API_URL + '/auth/refresh_token',
+      url: getApiHost() + '/auth/refresh_token',
       method: 'POST',
       body: {
         refresh_token: token,
@@ -37,7 +38,7 @@ export const rxAjax = (params: AjaxConfig): any => {
   return of(getCookie('accessToken')).pipe(
     map((token) => ({
       ...params,
-      url: import.meta.env.VITE_API_URL + params.url,
+      url: getApiHost() + params.url,
       headers: {
         ...(params?.headers ?? {}),
         Authorization: ['bearer', token].join(' '),

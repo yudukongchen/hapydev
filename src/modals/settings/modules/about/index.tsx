@@ -2,9 +2,12 @@ import { Button, theme } from 'antd';
 import { AboutWrapper } from './style';
 import SvgLogo from '@assets/logo.png';
 import SvgZhengshu from '@assets/icons/certificate.svg?react';
+import { getBaseUrl } from '@utils/path';
 
 const About = () => {
   const { token } = theme.useToken();
+
+  const baseUrl = getBaseUrl();
 
   return (
     <AboutWrapper token={token}>
@@ -27,32 +30,16 @@ const About = () => {
           商务热线：136-1709-2915&nbsp;&nbsp;&nbsp;&nbsp;Email：273345896@qq.com
         </div>
         <div className="info-item">
-          <Button
-            href={`${import.meta.env.VITE_BASE_URL}/register/protocol`}
-            target="_blank"
-            type="link"
-          >
+          <Button href={`${baseUrl}/register/protocol`} target="_blank" type="link">
             帮助中心
           </Button>
-          <Button
-            href={`${import.meta.env.VITE_BASE_URL}/register/protocol`}
-            target="_blank"
-            type="link"
-          >
+          <Button href={`${baseUrl}/register/protocol`} target="_blank" type="link">
             更新日志
           </Button>
-          <Button
-            href={`${import.meta.env.VITE_BASE_URL}/register/protocol`}
-            target="_blank"
-            type="link"
-          >
+          <Button href={`${baseUrl}/register/protocol`} target="_blank" type="link">
             服务协议
           </Button>
-          <Button
-            href={`${import.meta.env.VITE_BASE_URL}/register/protocol`}
-            target="_blank"
-            type="link"
-          >
+          <Button href={`${baseUrl}/register/protocol`} target="_blank" type="link">
             隐私协议
           </Button>
         </div>
