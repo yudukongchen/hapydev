@@ -25,8 +25,8 @@ const Header: React.FC<Props> = (props) => {
     }
     const result = produce(value, (draft) => {
       draft[rowIndex] = rowData;
-      // key和value均不能为空，并且非只读模式，才允许添加新行
-      if (!isEmpty(rowData?.name)) {
+      // key不能为空,允许添加新行
+      if (rowData?.name?.length > 0) {
         delete draft[rowIndex].is_empty_row;
       }
     });

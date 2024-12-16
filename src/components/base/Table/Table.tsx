@@ -10,7 +10,7 @@ import { theme } from 'antd';
 
 const Table: React.FC<TableProps> = (props) => {
   const {
-    data, // 数据源
+    data,
     style,
     className,
     columns,

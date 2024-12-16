@@ -8,4 +8,5 @@ export const DEFAULT_DATA_ITEM: DataItem = {
   is_required: 1,
   is_used: 1,
   description: '',
+  is_empty_row: true,
 };
