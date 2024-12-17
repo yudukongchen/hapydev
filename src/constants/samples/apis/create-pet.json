@@ -1,0 +1,135 @@
+{
+    "node_type": "interface",
+    "id": null,
+    "parent_id": null,
+    "name": "新建宠物信息",
+    "sort": 21,
+    "version": 1,
+    "data_type": "http",
+    "status": 1,
+    "data": {
+        "request": {
+            "url": "/pet",
+            "method": "POST",
+            "auth": {
+                "type": "inherit"
+            },
+            "headers": {
+                "sys_header": [
+                    {
+                        "name": "User-Agent",
+                        "field_type": "text",
+                        "value": "Hapydev-Runtime/1.0.0",
+                        "data_type": "string",
+                        "is_required": 1,
+                        "is_used": 1,
+                        "description": ""
+                    },
+                    {
+                        "name": "Accept",
+                        "field_type": "text",
+                        "value": "*/*",
+                        "data_type": "string",
+                        "is_required": 1,
+                        "is_used": 1,
+                        "description": ""
+                    },
+                    {
+                        "name": "Accept-Encoding",
+                        "field_type": "text",
+                        "value": "gzip, deflate, br",
+                        "data_type": "string",
+                        "is_required": 1,
+                        "is_used": 1,
+                        "description": ""
+                    },
+                    {
+                        "name": "Connection",
+                        "field_type": "text",
+                        "data_type": "string",
+                        "value": "keep-alive",
+                        "is_required": 1,
+                        "is_used": 1,
+                        "description": ""
+                    }
+                ],
+                "parameter": []
+            },
+            "params": {
+                "parameter": [],
+                "restful": []
+            },
+            "body": {
+                "mode": "json",
+                "parameter": [
+                    {
+                        "name": "name",
+                        "field_type": "text",
+                        "value": "huahua",
+                        "data_type": "string",
+                        "is_required": 1,
+                        "is_used": 1,
+                        "description": "宠物名"
+                    },
+                    {
+                        "name": "status",
+                        "field_type": "text",
+                        "value": "sold",
+                        "data_type": "string",
+                        "is_required": 1,
+                        "is_used": 1,
+                        "description": "宠物销售状态"
+                    }
+                ],
+                "raw": "",
+                "raw_schema": {
+                    "type": "object"
+                },
+                "binary": null
+            },
+            "cookies": [],
+            "pre_tasks": [
+                {
+                    "type": "custom_script",
+                    "enabled": 1,
+                    "data": ""
+                }
+            ],
+            "post_tasks": [
+                {
+                    "type": "custom_script",
+                    "enabled": 1,
+                    "data": ""
+                }
+            ]
+        },
+        "examples": [
+            {
+                "name": "成功",
+                "http_code": 200,
+                "description": "",
+                "content_type": "JSON",
+                "schema": {
+                    "type": "object",
+                    "properties": {
+                        "code": {
+                            "type": "string"
+                        },
+                        "data": {
+                            "$ref": "#/definitions/fc616b95-3c58-4d9b-84bb-3909792b3848"
+                        }
+                    },
+                    "x_hapydev_orders": [
+                        "code",
+                        "data"
+                    ],
+                    "required": []
+                },
+                "raw": "{\n  \"code\": 0,\n  \"data\": {\n     \"id\": 3,\n    \"name\": \"Hello Kity\",\n    \"image_url\": \"http://dummyimage.com/400x400\",\n    \"category\": {\n      \"id\": 71,\n      \"name\": \"Cat\"\n    },\n    \"tags\": [\n      {\n        \"id\": 22,\n        \"name\": \"Cat\"\n      }\n    ],\n    \"status\": \"sold\"\n  }\n}"
+            }
+        ],
+        "description": "",
+        "status": "developing"
+    },
+    "project_id": null
+}

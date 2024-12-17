@@ -1,6 +1,6 @@
 import { useMemoizedFn, useSafeState } from 'ahooks';
 import { message, Modal, theme } from 'antd';
-import { isEmpty } from 'lodash';
+import { isArray, isEmpty } from 'lodash';
 import React, { useEffect } from 'react';
 import { AddProjectWrapper } from './style';
 import { Project } from '#types/project';
@@ -13,6 +13,8 @@ import { LOGO_IMAGES } from './left-panel/logo-list/constants';
 import { emitGlobal } from '@subjects/global';
 import { getUserID } from '@utils/uid';
 import { useSelector } from 'react-redux';
+import { SAMPLE_APIS } from '@constants/samples/apis';
+import { batchSaveApis } from '@bll/apis';
 
 type Props = {
   open: boolean;
@@ -41,6 +43,30 @@ const CreateProject: React.FC<Props> = (props) => {
     }
   }, [open]);
 
+  const handleAddSamples = useMemoizedFn(() => {
+    const apiList = [];
+    const flatApis = (list, parent_id) => {
+      if (!isArray(list)) {
+        return;
+      }
+      list?.forEach((item, index) => {
+        const apiId = uuidV4();
+        apiList.push({
+          ...item.data,
+          id: apiId,
+          sort: index + 1,
+          parent_id,
+          project_id: project.project_id,
+        });
+        if (isArray(item?.children)) {
+          flatApis(item?.children, apiId);
+        }
+      });
+    };
+    flatApis(SAMPLE_APIS, '0');
+    batchSaveApis(project.project_id, apiList).subscribe();
+  });
+
   const handleSave = useMemoizedFn(() => {
     if (isEmpty(project?.name?.trim())) {
       message.error('项目名称不能为空');
@@ -60,6 +86,10 @@ const CreateProject: React.FC<Props> = (props) => {
         onClose();
         emitGlobal('TEAMS/PROJECTS/getAlllProjects', team_id);
         emitGlobal('PROJECTS/loadMyProjects');
+        //是否创建示例数据
+        if (project.create_example_datas === 1) {
+          handleAddSamples();
+        }
       },
     });
   });

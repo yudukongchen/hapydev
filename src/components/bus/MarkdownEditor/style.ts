@@ -176,9 +176,7 @@ export const MDEditorWrapper = styled.div<{ token: GlobalToken }>`
     bottom: 0;
     position: absolute;
   }
-  .cm-s-default .cm-header {
-    color: #00f;
-  }
+
   .cm-s-default .cm-quote {
     color: #090;
   }
@@ -213,9 +211,7 @@ export const MDEditorWrapper = styled.div<{ token: GlobalToken }>`
   .cm-s-default .cm-def {
     color: #00f;
   }
-  .cm-s-default .cm-variable-2 {
-    color: #05a;
-  }
+
   .cm-s-default .cm-variable-3,
   .cm-s-default .cm-type {
     color: #085;
@@ -248,9 +244,7 @@ export const MDEditorWrapper = styled.div<{ token: GlobalToken }>`
   .cm-s-default .cm-hr {
     color: #999;
   }
-  .cm-s-default .cm-link {
-    color: #00c;
-  }
+
   .cm-s-default .cm-error,
   .cm-invalidchar {
     color: red;

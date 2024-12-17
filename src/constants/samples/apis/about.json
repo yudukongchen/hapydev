@@ -1,0 +1,14 @@
+{
+    "node_type": "interface",
+    "id": null,
+    "parent_id": "0",
+    "name": "欢迎使用Hapydev",
+    "sort": 16,
+    "version": 1,
+    "data_type": "document",
+    "status": 1,
+    "data": {
+        "description": "## 欢迎使用Hapydev\nHapydev是一款高效的专业测试工具，支持业内主流的接口协议，使用受众为整个研发技术团队，主要使用者为前端开发、后端开发、测试人员。\n\nHapydev软件致力于消除不同应用工具之间的数据交换壁垒。通过整合Fiddler/Charles，Postman，JMeter，Selenium等工具的核心功能，实现数据统一管理并串联研发过程中的关键环节，使得研发团队能够摆脱技术工具选择的限制，真正实现以赋能业务为目标的技术创新。\n\n## 软件特点：\n\n- 无需登陆，无需联网可使用软件绝大部分功能\n\n- 零代码实现场景复杂的自动化测试。支持集成测试，数据驱动测试，回归测试等功能。\n\n- 支持多种方式与第三方系统进行融合，同时支持与jira，tapd或jekins等第三方平台集成。\n\n- 支持grpc一元/二元，单向/双向调用，支持proto解析，及服务反射等功能。\n\n- 面向底层实现软件功能逻辑，调试输出的信息更精准，帮助开发快速定位问题。\n\n- 集成了丰富的脚本库，支持加密解密，自动验证token等功能\n\n- 多平台支持：即将支持 Windows、macOS、Linux 等主流操作系统。\n\n\n更详细使用方法，请跳转[帮助中心](https://www.hapydev.com/docs) \n\n\n\n"
+    },
+    "project_id": null
+}

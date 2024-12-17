@@ -1,0 +1,73 @@
+{
+    "node_type": "interface",
+    "id": null,
+    "parent_id": null,
+    "name": "查询宠物详情",
+    "sort": 18,
+    "version": 1,
+    "data_type": "http",
+    "status": 1,
+    "data": {
+        "request": {
+            "url": "/pet/:petId",
+            "method": "GET",
+            "auth": {
+                "type": "inherit"
+            },
+            "headers": {
+                "sys_header": [],
+                "parameter": []
+            },
+            "params": {
+                "parameter": [],
+                "restful": [
+                    {
+                        "is_used": 1,
+                        "name": "petId",
+                        "value": "123",
+                        "description": "宠物id"
+                    }
+                ]
+            },
+            "body": {
+                "mode": "none",
+                "parameter": [],
+                "raw": "",
+                "raw_schema": {
+                    "type": "object"
+                },
+                "binary": null
+            },
+            "cookies": [],
+            "pre_tasks": [
+                {
+                    "type": "custom_script",
+                    "enabled": 1,
+                    "data": ""
+                }
+            ],
+            "post_tasks": [
+                {
+                    "type": "custom_script",
+                    "enabled": 1,
+                    "data": ""
+                }
+            ]
+        },
+        "examples": [
+            {
+                "name": "成功",
+                "http_code": 200,
+                "description": "",
+                "content_type": "JSON",
+                "schema": {
+                    "type": "object"
+                },
+                "raw": "{}"
+            }
+        ],
+        "description": "",
+        "status": "developing"
+    },
+    "project_id": null
+}

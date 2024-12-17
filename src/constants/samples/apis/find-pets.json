@@ -1,0 +1,129 @@
+{
+    "node_type": "interface",
+    "id": "efdd20d6-647b-455e-8d5e-97688890abb1",
+    "parent_id": "0",
+    "name": "根据状态查找宠物列表",
+    "sort": 26,
+    "version": 1,
+    "data_type": "http",
+    "status": 1,
+    "data": {
+        "request": {
+            "url": "/pet/findBgStatus?status=sold",
+            "method": "GET",
+            "auth": {
+                "type": "inherit"
+            },
+            "headers": {
+                "sys_header": [
+                    {
+                        "name": "User-Agent",
+                        "field_type": "text",
+                        "value": "Hapydev-Runtime/1.0.0",
+                        "data_type": "string",
+                        "is_required": 1,
+                        "is_used": 1,
+                        "description": ""
+                    },
+                    {
+                        "name": "Accept",
+                        "field_type": "text",
+                        "value": "*/*",
+                        "data_type": "string",
+                        "is_required": 1,
+                        "is_used": 1,
+                        "description": ""
+                    },
+                    {
+                        "name": "Accept-Encoding",
+                        "field_type": "text",
+                        "value": "gzip, deflate, br",
+                        "data_type": "string",
+                        "is_required": 1,
+                        "is_used": 1,
+                        "description": ""
+                    },
+                    {
+                        "name": "Connection",
+                        "field_type": "text",
+                        "data_type": "string",
+                        "value": "keep-alive",
+                        "is_required": 1,
+                        "is_used": 1,
+                        "description": ""
+                    }
+                ],
+                "parameter": []
+            },
+            "params": {
+                "parameter": [
+                    {
+                        "name": "status",
+                        "field_type": "text",
+                        "value": "sold",
+                        "data_type": "string",
+                        "is_required": 1,
+                        "is_used": 1,
+                        "description": "宠物销售状态"
+                    }
+                ],
+                "restful": []
+            },
+            "body": {
+                "mode": "none",
+                "parameter": [],
+                "raw": "",
+                "raw_schema": {
+                    "type": "object"
+                },
+                "binary": null
+            },
+            "cookies": [],
+            "pre_tasks": [
+                {
+                    "type": "custom_script",
+                    "enabled": 1,
+                    "data": ""
+                }
+            ],
+            "post_tasks": [
+                {
+                    "type": "custom_script",
+                    "enabled": 1,
+                    "data": ""
+                }
+            ]
+        },
+        "examples": [
+            {
+                "name": "成功",
+                "http_code": 200,
+                "description": "",
+                "content_type": "JSON",
+                "schema": {
+                    "type": "object",
+                    "properties": {
+                        "code": {
+                            "type": "string"
+                        },
+                        "data": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/fc616b95-3c58-4d9b-84bb-3909792b3848"
+                            }
+                        }
+                    },
+                    "x_hapydev_orders": [
+                        "code",
+                        "data"
+                    ],
+                    "required": []
+                },
+                "raw": "{\n    \"code\": 0,\n    \"data\": [\n        {\n            \"name\": \"Hello Kity\",\n            \"image_url\": \"http://dummyimage.com/400x400\",\n            \"id\": 3,\n            \"category\": {\n                \"id\": 71,\n                \"name\": \"Cat\"\n            },\n            \"tags\": [\n                {\n                    \"id\": 22,\n                    \"name\": \"Cat\"\n                }\n            ],\n            \"status\": \"sold\"\n        },\n        {\n            \"name\": \"White Dog\",\n            \"image_url\":  \"http://dummyimage.com/400x400\",\n            \"id\": 3,\n            \"category\": {\n                \"id\": 71,\n                \"name\": \"Dog\"\n            },\n            \"tags\": [\n                {\n                    \"id\": 22,\n                    \"name\": \"Dog\"\n                }\n            ],\n            \"status\": \"sold\"\n        }\n    ]\n}"
+            }
+        ],
+        "description": "",
+        "status": "developing"
+    },
+    "project_id": "01e83681-d9e5-4b44-943f-01ae5f1286e6"
+}
