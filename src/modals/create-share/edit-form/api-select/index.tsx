@@ -81,7 +81,7 @@ const ApiSelect: React.FC<Props> = (props) => {
   };
 
   const handleOk = () => {
-    const list = [];
+    const list: { [key: string]: ShareApiItem } = {};
     ckeckeds.forEach((id) => {
       const item = {
         id,
@@ -89,19 +89,41 @@ const ApiSelect: React.FC<Props> = (props) => {
       if (folders?.[id] === true) {
         item.is_all = 1;
       }
-
-      list.push(item);
+      list[id] = item;
     });
-    onChange(list);
+
+    Object.entries(folders).forEach(([id, checked]) => {
+      if (checked === true) {
+        list[id] = {
+          id: id,
+          is_all: 1,
+        };
+      }
+    });
+    const resultList = Object.values(list);
+    onChange(resultList);
     setShowTree(false);
   };
+
+  const computedCheckeds = useMemo(() => {
+    const checkedDatas = {};
+    ckeckeds?.forEach((id) => {
+      checkedDatas[id] = true;
+    });
+    Object.entries(folders).forEach(([id, checked]) => {
+      if (checked === true) {
+        checkedDatas[id] = true;
+      }
+    });
+    return Object.keys(checkedDatas);
+  }, [ckeckeds, folders]);
 
   return (
     <>
       <Modal open={showTree} title="选择接口" onCancel={handleClose} onOk={handleOk}>
         <div style={{ maxHeight: 400, overflow: 'auto' }} className="beautify-scrollbar">
           <Tree
-            checkedKeys={ckeckeds}
+            checkedKeys={computedCheckeds}
             className={treeWrapper}
             selectedKeys={[]}
             activeKey={null}

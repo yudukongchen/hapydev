@@ -7,6 +7,7 @@ import { nodePolyfills } from 'vite-plugin-node-polyfills';
 
 export default defineConfig({
   server: {
+    host: '0.0.0.0',
     port: 8000,
   },
 
@@ -41,13 +42,13 @@ export default defineConfig({
     },
   },
   build: {
-    minify: 'terser', 
-    commonjsOptions: { transformMixedEsModules: true }, 
+    minify: 'terser',
+    commonjsOptions: { transformMixedEsModules: true },
     terserOptions: {
       compress: {
         drop_console: true,
         drop_debugger: true,
       },
     },
-  }
+  },
 });

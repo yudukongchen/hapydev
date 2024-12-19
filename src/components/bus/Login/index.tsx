@@ -10,6 +10,7 @@ import { tap } from 'rxjs';
 import { setCookie } from '@utils/cookies';
 import { emitGlobal } from '@subjects/global';
 import { openUrl } from '@utils/utils';
+import { getBaseUrl } from '@utils/path';
 
 type Props = {
   open: boolean;
@@ -125,7 +126,7 @@ const Login: React.FC<Props> = (props) => {
           <Button
             type="link"
             onClick={() => {
-              openUrl(`https://app.hapydev.com/register/forget-password`);
+              openUrl(`${getBaseUrl()}/register/forget-password`);
             }}
           >
             忘记密码
@@ -135,7 +136,7 @@ const Login: React.FC<Props> = (props) => {
           <span>没有账号？</span>
           <Button
             onClick={() => {
-              openUrl(`https://app.hapydev.com/register`);
+              openUrl(`${getBaseUrl()}/register`);
             }}
             type="link"
           >
