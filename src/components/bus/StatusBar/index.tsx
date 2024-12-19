@@ -13,7 +13,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { updateWorkspace } from '@reducers/workspace';
 import React from 'react';
 import produce from 'immer';
-import imgWechat from './wechat.jpeg';
+import imgWechat from '@assets/products/contact-wechat.png';
 
 type Props = {
   show_terminal?: boolean;
@@ -104,7 +104,8 @@ const StatusBar: React.FC<Props> = (props) => {
           title="扫下方微信二维码添加"
           content={
             <div>
-              <img src={imgWechat} style={{ width: 160 }} />
+              <p>客服微信（备注:hapydev交流）</p>
+              <img src={imgWechat} style={{ width: 200 }} />
             </div>
           }
         >

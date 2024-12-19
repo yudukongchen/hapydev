@@ -1,0 +1,77 @@
+{
+    "node_type": "interface",
+    "id": "c6597026-0592-4ac7-9e90-79bc69e5cda8",
+    "parent_id": "0",
+    "name": "查询宠物信息",
+    "sort": 22,
+    "version": 1,
+    "data_type": "http",
+    "status": 1,
+    "data": {
+        "request": {
+            "url": "/pet/:petId",
+            "method": "GET",
+            "auth": {
+                "type": "inherit"
+            },
+            "headers": {
+                "sys_header": [],
+                "parameter": []
+            },
+            "params": {
+                "parameter": [],
+                "restful": [
+                    {
+                        "is_used": 1,
+                        "name": "petId",
+                        "value": "123",
+                        "description": "宠物ID"
+                    }
+                ]
+            },
+            "body": {
+                "mode": "none",
+                "parameter": [],
+                "raw": "",
+                "raw_schema": {
+                    "type": "object"
+                },
+                "binary": null
+            },
+            "cookies": [],
+            "pre_tasks": [
+                {
+                    "type": "custom_script",
+                    "enabled": 1,
+                    "data": ""
+                }
+            ],
+            "post_tasks": [
+                {
+                    "type": "custom_script",
+                    "enabled": 1,
+                    "data": ""
+                }
+            ]
+        },
+        "examples": [
+            {
+                "name": "成功",
+                "http_code": 200,
+                "description": "",
+                "content_type": "JSON",
+                "schema": {
+                    "type": "object"
+                },
+                "raw": "{}"
+            }
+        ],
+        "description": "",
+        "status": "developing"
+    },
+    "project_id": "01e83681-d9e5-4b44-943f-01ae5f1286e6",
+    "create_time": "2024-12-13T01:24:32+08:00",
+    "creator_id": "NO_LOGIN",
+    "update_time": "2024-12-13T01:25:24+08:00",
+    "updater_id": "NO_LOGIN"
+}

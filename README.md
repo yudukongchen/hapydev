@@ -92,7 +92,17 @@
     
   打开浏览器访问 http://ip:6003 ,显示“hapydev代理已启动!”即为安装成功
 
-- 第2步，安装调试应用程序
+
+- 第2步，安装后端API服务
+
+  ```bash
+  docker pull hapydev/hapydev-api
+  docker run -d -p 6002:6002 hapydev/hapydev-api
+  ```
+    支持动态传入环境变量，详情点击 https://github.com/hapydev-team/hapydev-server/blob/master/README.md
+
+
+- 第3步，安装调试应用程序
   
   ```bash
   docker pull hapydev/hapydev
@@ -111,10 +121,6 @@
   然后打开浏览器访问 http://ip, 进行访问
 
 
-
-
-
-
 ## 账户和订阅
 
 您可以在未拥有Hapydev账户的情况下使用，也可以创建一个免费账户来使用该产品的全部功能。
@@ -129,10 +135,7 @@ Hapydev开源版与免费版，可以满足大多数企业与个人用户需求�
 
 ## Bug 和需求反馈
 
-如果想要反馈 Bug、提供产品意见，可以创建一个 [Github issue](https://github.com/hapydev-team/hapydev/issues) 联系我们，十分感谢！
-
-如果您希望和 Hapydev 团队近距离交流，讨论产品使用技巧以及了解产品最新进展，欢迎加入以下渠道。
-
+如果您想要反馈 Bug、提供产品意见，或者希望和 Hapydev 团队近距离交流，欢迎加入以下渠道。
 - 扫客服小二微信加群：（备注：hapydev技术交流）
 
 <p align="left"><img src="src/assets/products/contact-wechat.png" width="200"  /></p>

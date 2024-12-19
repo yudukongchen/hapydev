@@ -1,0 +1,35 @@
+{
+    "node_type": "interface",
+    "id": "8c63a295-2c06-48e6-937e-5f3481f78ae9",
+    "parent_id": "0",
+    "name": "示例项目",
+    "sort": 27,
+    "version": 1,
+    "data_type": "folder",
+    "status": 1,
+    "data": {
+        "server_id": "inherit",
+        "request": {
+            "auth": {
+                "type": "inherit"
+            },
+            "pre_tasks": [
+                {
+                    "type": "custom_script",
+                    "enabled": 1,
+                    "data": ""
+                }
+            ],
+            "post_tasks": [
+                {
+                    "type": "custom_script",
+                    "enabled": 1,
+                    "data": ""
+                }
+            ]
+        },
+        "description": "",
+        "status": "developing"
+    },
+    "project_id": "01e83681-d9e5-4b44-943f-01ae5f1286e6"
+}
