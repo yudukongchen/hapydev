@@ -7,6 +7,7 @@ export const TextViewerWrapper = styled.div<{ token: GlobalToken }>`
   background-color: ${({ token }) => token.colorFillSecondary} !important;
   overflow: hidden;
   pre {
-    overflow-x: auto;
+    line-height: 22px;
+    text-wrap-mode: wrap;
   }
 `;
