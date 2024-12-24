@@ -3,6 +3,7 @@ import { GlobalToken } from 'antd';
 
 export const JsonViewWrapperLight = styled.div<{ token: GlobalToken }>`
   pre {
+    line-height: 22px;
     text-wrap-mode: wrap;
     font-size: 14px;
   }

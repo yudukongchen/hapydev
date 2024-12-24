@@ -1,7 +1,7 @@
 export const POST_SCRIPTS = [
   {
     title: '响应码为 200',
-    text: `pm.test("Status code is 200", function () {\n\tpm.response.to.have.status(200);\n});`,
+    text: `pm.test("Status code is 200", function () {\n\tpm.expect(pm.response).to.have.status(200);\n});`,
   },
   {
     title: '正文匹配含有字符串string',
@@ -13,7 +13,7 @@ export const POST_SCRIPTS = [
   },
   {
     title: 'Response Body 字符串检查',
-    text: `pm.test("Body is correct", function () {\n\tpm.response.to.have.body("response_body_string");\n});`,
+    text: `pm.test("Body is correct", function () {\n\tpm.expect(pm.response).to.have.body("response_body_string");\n});`,
   },
   {
     title: '修改Response Body',
@@ -21,7 +21,7 @@ export const POST_SCRIPTS = [
   },
   {
     title: 'Header 包含 Content-Type',
-    text: `pm.test("Content-Type is present", function () {\n\tpm.response.to.have.header("Content-Type");\n});`,
+    text: `pm.test("Content-Type is present", function () {\n\tpm.expect(pm.response).to.have.header("Content-Type");\n});`,
   },
   {
     title: '响应时间小于 200ms',
