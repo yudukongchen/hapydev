@@ -9,6 +9,7 @@ declare interface Window {
   BASE_URL: string;
   API_HOST_URL: string;
   DOC_HOST_URL: string;
+  VITE_WEB_HELP_URL: string;
 }
 
 declare module '*.png' {

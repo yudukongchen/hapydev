@@ -12,7 +12,7 @@ import { registerUserRequest } from '@services/users';
 import randomName from './random-nick-name';
 import Header from '../header';
 import { RegisterWrapper } from '../style';
-import { getBaseUrl } from '@utils/path';
+import { getBaseUrl, getWebsiteHelpHost } from '@utils/path';
 
 const RegForm = () => {
   const { token } = theme.useToken();
@@ -132,7 +132,11 @@ const RegForm = () => {
           >
             我已阅读并同意
           </Checkbox>
-          <a href={`${baseUrl}/register/protocol`} target="_blank" className="link">
+          <a
+            href={`${getWebsiteHelpHost()}/service-conditions/service`}
+            target="_blank"
+            className="link"
+          >
             《Hapydev用户服务协议》
           </a>
         </div>

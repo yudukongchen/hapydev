@@ -155,6 +155,8 @@ const batchSaveApis = async (params) => {
   return listData;
 };
 
+export const batchSaveLocalApis = batchSaveApis;
+
 export default {
   saveApi,
   batchGetApis,

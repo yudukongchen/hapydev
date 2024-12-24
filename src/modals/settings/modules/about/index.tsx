@@ -2,12 +2,12 @@ import { Button, theme } from 'antd';
 import { AboutWrapper } from './style';
 import SvgLogo from '@assets/logo.png';
 import SvgZhengshu from '@assets/icons/certificate.svg?react';
-import { getBaseUrl } from '@utils/path';
+import { getWebsiteHelpHost } from '@utils/path';
 
 const About = () => {
   const { token } = theme.useToken();
 
-  const baseUrl = getBaseUrl();
+  const baseUrl = getWebsiteHelpHost();
 
   return (
     <AboutWrapper token={token}>
@@ -27,19 +27,19 @@ const About = () => {
           &nbsp;本产品已经通过 ISO 27001 信息安全管理体系认证
         </div>
         <div className="info-item">
-          商务热线：136-1709-2915&nbsp;&nbsp;&nbsp;&nbsp;Email：273345896@qq.com
+          商务热线：136-1709-2915&nbsp;&nbsp;&nbsp;&nbsp;Email：turenquan@hapydev.com
         </div>
         <div className="info-item">
-          <Button href={`${baseUrl}/register/protocol`} target="_blank" type="link">
+          <Button href={`${baseUrl}`} target="_blank" type="link">
             帮助中心
           </Button>
-          <Button href={`${baseUrl}/register/protocol`} target="_blank" type="link">
+          <Button href={`${baseUrl}/overview/changelog`} target="_blank" type="link">
             更新日志
           </Button>
-          <Button href={`${baseUrl}/register/protocol`} target="_blank" type="link">
+          <Button href={`${baseUrl}/service-conditions/service`} target="_blank" type="link">
             服务协议
           </Button>
-          <Button href={`${baseUrl}/register/protocol`} target="_blank" type="link">
+          <Button href={`${baseUrl}/service-conditions/private`} target="_blank" type="link">
             隐私协议
           </Button>
         </div>

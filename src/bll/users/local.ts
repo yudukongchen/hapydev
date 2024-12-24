@@ -1,11 +1,41 @@
+import { batchSaveApis } from '@bll/apis';
+import { batchSaveLocalApis } from '@bll/apis/local';
 import { initProjectData } from '@bll/projects/local';
 import { getMyOfflineTeams } from '@bll/teams/local';
+import { SAMPLE_APIS } from '@constants/samples/apis';
 import { DEFAULT_PROJECT } from '@constants/teams/default-project';
 import { TeamProjects } from '@db/teams';
 import { UserInfo, Projects, UserConfig } from '@db/users';
 import dayjs from 'dayjs';
 import { cloneDeep, isArray, isUndefined, pick } from 'lodash';
 import { v4 as uuidV4 } from 'uuid';
+
+const addSampleApis = async (project_id) => {
+  const api_list = [];
+  const flatApis = (list, parent_id) => {
+    if (!isArray(list)) {
+      return;
+    }
+    list?.forEach((item, index) => {
+      const apiId = uuidV4();
+      api_list.push({
+        ...item.data,
+        id: apiId,
+        sort: index + 1,
+        parent_id,
+        project_id: project_id,
+      });
+      if (isArray(item?.children)) {
+        flatApis(item?.children, apiId);
+      }
+    });
+  };
+  flatApis(SAMPLE_APIS, '0');
+  await batchSaveLocalApis({
+    project_id,
+    api_list,
+  });
+};
 
 //获取离线项目列表
 const getOfflineProjects = async (user_id) => {
@@ -35,6 +65,10 @@ const getOfflineProjects = async (user_id) => {
     'team_id',
   ]);
   await TeamProjects.put(defaultTeamProject);
+
+  //创建示例接口
+  await addSampleApis(defaultProject.project_id);
+
   return [defaultProject];
 };
 

@@ -40,3 +40,11 @@ export const getDocHost = () => {
   }
   return import.meta.env.VITE_DOC_HOST;
 };
+
+//获取帮助文档首页地址
+export const getWebsiteHelpHost = () => {
+  if (isString(window?.VITE_WEB_HELP_URL) && !isEmpty(window?.VITE_WEB_HELP_URL)) {
+    return window?.VITE_WEB_HELP_URL;
+  }
+  return import.meta.env.VITE_WEB_HELP_URL;
+};
