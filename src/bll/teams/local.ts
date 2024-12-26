@@ -14,6 +14,14 @@ const createTeam = async (data) => {
   return data;
 };
 
+export const getProjectInfo = async (project_id) => {
+  const list = await TeamProjects.where({ project_id }).toArray();
+  if (isArray(list) && list?.length > 0) {
+    return list[0];
+  }
+  return null;
+};
+
 export const getMyOfflineTeams = async () => {
   const offlineList = await Teams.where({ user_id: 'NO_LOGIN' }).toArray();
   if (isArray(offlineList) && offlineList.length > 0) {

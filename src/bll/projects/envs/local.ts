@@ -9,7 +9,7 @@ const saveEnvs = async (params) => {
   return result;
 };
 
-const getEnvsList = async (project_id) => {
+export const getEnvsList = async (project_id) => {
   const result = await Envs.where({ project_id }).toArray();
   if (!isArray(result)) {
     return [];

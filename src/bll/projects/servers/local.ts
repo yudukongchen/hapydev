@@ -12,7 +12,7 @@ const saveServers = async (params) => {
   return result;
 };
 
-const getServersList = async (project_id) => {
+export const getServersList = async (project_id) => {
   const result = await Servers.where({ project_id }).toArray();
   if (!isArray(result)) {
     return [];

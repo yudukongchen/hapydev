@@ -41,7 +41,7 @@ export const getDiffList = async (project_id, server_list) => {
   return diff_list;
 };
 
-const batchGetModels = async (project_id) => {
+export const batchGetModels = async (project_id) => {
   const list = await DataModels.where({ project_id, status: 1 }).toArray();
   if (!isArray(list)) {
     return [];

@@ -5,7 +5,7 @@ import hapydev from '@assets/logo.png';
 
 export const DATA_TYPES = [
   { icon: hapydev, type: 'hapydev', title: 'Hapydev' },
-  { icon: openapi, type: 'openapi', title: 'OpenAPI/Swagger' },
-  { icon: postman, type: 'postman', title: 'Postman' },
-  { icon: markdown, type: 'markdown', title: 'Markdown' },
+  { icon: openapi, type: 'openapi', title: 'OpenAPI/Swagger', disabled: true },
+  { icon: postman, type: 'postman', title: 'Postman', disabled: true },
+  { icon: markdown, type: 'markdown', title: 'Markdown', disabled: true },
 ];

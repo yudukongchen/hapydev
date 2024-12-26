@@ -16,10 +16,11 @@ export const DATA_TYPES = [
   { icon: openapi, type: 'openapi', title: 'OpenAPI/Swagger' },
   { icon: postman, type: 'postman', title: 'Postman' },
   { icon: curl, type: 'curl', title: 'cURL' },
+  { icon: hapydev, type: 'hapydev', title: 'Hapydev' },
   { icon: apifox, type: 'apifox', title: 'Apifox' },
   { icon: apipost, type: 'apipost', title: 'Apipost' },
   { icon: eolink, type: 'eolink', title: 'Eolink' },
-  { icon: hapydev, type: 'hapydev', title: 'Hapydev', disabled: true },
+
   { icon: knife4j, type: 'knife4j', title: 'Knife4j', disabled: true },
   { icon: yapi, type: 'yapi', title: 'YApi', disabled: true },
   { icon: apizza, type: 'apizza', title: 'Apizza', disabled: true },
