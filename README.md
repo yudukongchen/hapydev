@@ -1,5 +1,5 @@
 <br />
-<p align="center"><img src="src/assets/logo-readme.png" width="300"  /></p>
+<p align="center"><a target="_blank" href="https://hapydev.com"><img src="src/assets/logo-readme.png" width="300" /></a></p>
 
 ## hapydev
 
@@ -132,7 +132,7 @@ Hapydev提供了数据库连接管理功能，以及私人环境功能，为了�
 ## 高级功能和支持
 
 Hapydev开源版与免费版，可以满足大多数企业与个人用户需求，但如果您需要获得更多高级功能，如无限协作，分支管理，为您的项目分配组织的能力，以及使用第三方ID（如SSO/SAML）等其他功能，那么您可以尝试使用其他版本。
-点此了解所有版本支持内容。https://www.hapydev.com/price
+点此了解所有版本支持内容。https://hapydev.com/price
 
 ## Bug 和需求反馈
 
