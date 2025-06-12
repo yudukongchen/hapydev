@@ -17,6 +17,7 @@ import { getBodyMode } from './utils';
 import { XMLBuilder } from 'fast-xml-parser';
 import { DEFAULT_FOLDER_DATA } from '@constants/apis/folder';
 import { mockSchema } from '@utils/mock/schema';
+import { isInt } from 'class-validator';
 
 //处理foxurl中的path部分
 const parseOpenApiUrl = (path) => {
@@ -36,7 +37,7 @@ const parseDataItems = (dataItems) => {
     for (const item of dataItems) {
       const dataItem = cloneDeep(DEFAULT_DATA_ITEM);
       dataItem.name = item?.name;
-      const schemaValue = mockSchema(item?.schema) ?? '';
+      const schemaValue = item?.schema?.example ?? '';
       if (isPlainObject(schemaValue)) {
         dataItem.value = JSON.stringify(schemaValue);
       } else if (isString(schemaValue)) {
@@ -158,13 +159,35 @@ const parseBodyData = (apiBody: Get<ApiRequest, 'body'>, openApiBody) => {
   }
 };
 
+//解析examples
+
+const parseExamples: (data: any) => any[] = (response) => {
+  const result = [];
+  if (isPlainObject(response)) {
+    Object.entries(response).forEach(([code, data]: [string, any]) => {
+      const contentKeys = Object.keys(data?.content || {});
+      const contentDatas: any = Object.values(data?.content || {});
+      const item = {
+        name: data?.description,
+        http_code: isInt(code) ? code : '500',
+        description: '',
+        content_type: contentKeys?.[0],
+        schema: contentDatas?.[0]?.schema,
+        raw: '',
+      };
+      result.push(item);
+    });
+  }
+  return result;
+};
+
 export const parseApiList = (paths) => {
   const apiDatas = {};
   const rootFolders = {};
   for (const [url, openData] of Object.entries(isPlainObject(paths) ? paths : {})) {
     for (const [method, openApi] of Object.entries(isPlainObject(openData) ? openData : {})) {
       const apiId = uuidV4();
-      const parentId = openApi?.tags?.[0];
+      const parentId = openApi?.tags?.[0] || '根目录';
       if (isUndefined(rootFolders?.[parentId])) {
         rootFolders[parentId] = { children: [] };
       }
@@ -180,9 +203,17 @@ export const parseApiList = (paths) => {
       apiData.data.request.params.restful = parsePathItems(openApi?.parameters);
       apiData.data.request.headers.parameter = parseHeaderItems(openApi?.parameters);
       parseBodyData(apiData.data.request.body, openApi);
+
+      apiData.data.examples = parseExamples(openApi?.responses);
       apiData.data.description = openApi?.description ?? '';
+
       apiDatas[apiId] = apiData;
       rootFolders[parentId].children.push(apiData);
+
+      //已弃用
+      if (openApi?.deprecated === true) {
+        apiData.data.status = 'deprecated';
+      }
     }
   }
   const resultDatas = {};

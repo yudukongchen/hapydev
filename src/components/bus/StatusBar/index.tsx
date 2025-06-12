@@ -13,7 +13,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { updateWorkspace } from '@reducers/workspace';
 import React from 'react';
 import produce from 'immer';
-import imgWechat from '@assets/products/contact-wechat.png';
+import imgWechat from '@assets/wechat.png';
 
 type Props = {
   show_terminal?: boolean;

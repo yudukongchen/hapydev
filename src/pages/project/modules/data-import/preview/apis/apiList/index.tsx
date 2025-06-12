@@ -1,13 +1,14 @@
 import { BaseCollection } from '#types/collection/base';
-import { Tree } from 'antd';
+import { Checkbox, Tree, theme } from 'antd';
 import React from 'react';
-import useApis from './hooks/useApis';
+import useApis from '../hooks/useApis';
 import SvgFolder from '@assets/icons/folder.svg?react';
 import SvgMarkdown from '@assets/icons/markdown.svg?react';
 import cn from 'classnames';
 import { methodsWrapper } from '@theme/methods';
 import { getFullPathUrl } from '@utils/url';
 import { useMemoizedFn } from 'ahooks';
+import { ApiListWrapper } from './style';
 
 type Props = {
   apiList: BaseCollection[];
@@ -18,6 +19,8 @@ type Props = {
 
 const ApiList: React.FC<Props> = (props) => {
   const { apiList, value, onChange, keepPrefixUrl } = props;
+
+  const { token } = theme.useToken();
 
   const treeDatas = useApis({ apiList });
 
@@ -35,19 +38,38 @@ const ApiList: React.FC<Props> = (props) => {
     );
   });
 
+  const handleChangeSelectAll = useMemoizedFn((e) => {
+    if (e.target.checked === true) {
+      const result = apiList?.map((item) => item.id);
+      onChange(result);
+      return;
+    }
+    onChange([]);
+  });
+
   return (
-    <Tree
-      className={cn('left-tree-panel', 'beautify-scrollbar', methodsWrapper)}
-      height={480}
-      treeData={treeDatas}
-      selectable={false}
-      checkable
-      checkedKeys={value}
-      onCheck={onChange}
-      titleRender={renderNode}
-      defaultExpandAll
-      virtual
-    />
+    <ApiListWrapper token={token}>
+      <div className="select-all-header">
+        <Checkbox
+          checked={apiList?.length === value?.length}
+          onChange={handleChangeSelectAll}
+          disabled={apiList?.length === 0}
+        >
+          选择全部
+        </Checkbox>
+      </div>
+      <Tree
+        className={cn('tree-list-panel', 'beautify-scrollbar', methodsWrapper)}
+        treeData={treeDatas}
+        selectable={false}
+        checkable
+        checkedKeys={value}
+        onCheck={onChange}
+        titleRender={renderNode}
+        defaultExpandAll
+        virtual
+      />
+    </ApiListWrapper>
   );
 };
 

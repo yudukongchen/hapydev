@@ -8,7 +8,7 @@ export const REQUEST_METHODS = {
   '6': 'PATCH',
 };
 
-export const DATA_TYPES = {
+export const FILED_TYPES = {
   '0': 'string',
   '2': 'json',
   '3': 'int',

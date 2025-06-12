@@ -19,7 +19,7 @@ const parseDataItems = (dataItems) => {
       dataItem.description = item?.description ?? '';
       dataItem.is_required = item?.not_null === 1 ? 1 : -1;
       dataItem.is_used = item?.is_checked === 1 ? 1 : 1;
-      dataItem.data_type = item?.field_type?.toLowerCase();
+      dataItem.field_type = item?.field_type?.toLowerCase();
       dataItem.content_type = item?.content_type ?? '';
       resultList.push(dataItem);
     });

@@ -1,10 +1,10 @@
 import { treeSelectWraper } from '@theme/tree-select';
 import { Select, Switch, TreeSelect } from 'antd';
 import useFolders from './hooks/useFolders';
-import { APIOptions } from '../type';
 import React from 'react';
 import { CONFLICT_OPTIONS } from './constants';
 import { css } from '@emotion/css';
+import { APIOptions } from '#types/project/data-import';
 
 type Props = {
   value: APIOptions;

@@ -6,7 +6,7 @@ import { DEFAULT_DATA_ITEM } from '@constants/dataItem';
 import { cloneDeep, isArray, isEmpty, isUndefined } from 'lodash';
 import { parseAuth } from './auth';
 import { v4 as uuidV4 } from 'uuid';
-import { DATA_TYPES, REQUEST_METHODS } from './constants';
+import { FILED_TYPES, REQUEST_METHODS } from './constants';
 
 const parseBody = (item) => {
   if (isEmpty(item?.requestInfo) && isEmpty(item?.baseInfo?.apiRequestRaw)) {
@@ -51,7 +51,7 @@ const parseQuerys = (dataItems) => {
       dataItem.description = item?.paramName ?? '';
       dataItem.is_required = item?.paramNotNull === '0' ? 1 : -1;
       dataItem.is_used = 1;
-      dataItem.data_type = DATA_TYPES?.[item?.paramType] ?? 'string';
+      dataItem.field_type = FILED_TYPES?.[item?.paramType] ?? 'string';
       resultList.push(dataItem);
     });
   }
@@ -68,7 +68,7 @@ const parseHeaders = (dataItems) => {
       dataItem.description = item?.paramName ?? '';
       dataItem.is_required = item?.paramNotNull === '0' ? 1 : -1;
       dataItem.is_used = 1;
-      dataItem.data_type = DATA_TYPES?.[item?.paramType] ?? 'string';
+      dataItem.field_type = FILED_TYPES?.[item?.paramType] ?? 'string';
       resultList.push(dataItem);
     });
   }

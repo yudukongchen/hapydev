@@ -39,7 +39,7 @@ const parseFoxDataItems = (dataItems) => {
       dataItem.description = item?.description;
       dataItem.is_required = item?.required === true ? 1 : -1;
       dataItem.is_used = item?.enable === true ? 1 : 1;
-      dataItem.data_type = item?.type;
+      dataItem.field_type = item?.type;
       resultList.push(dataItem);
     });
   }
@@ -51,6 +51,9 @@ export const parseFoxBody = (body) => {
     return DEFAULT_HTTP_BODY;
   }
   const bodyData = cloneDeep(DEFAULT_HTTP_BODY);
+
+  const rawText = body?.examples?.[0]?.value ?? '';
+
   if (body?.type === 'multipart/form-data') {
     bodyData.mode = 'form-data';
     bodyData.parameter = parseFoxDataItems(body?.parameters);
@@ -61,23 +64,25 @@ export const parseFoxBody = (body) => {
   }
   if (body?.type === 'application/json') {
     bodyData.mode = 'json';
-    bodyData.raw = body?.example;
+    bodyData.raw = rawText;
+    bodyData.raw_schema = body?.jsonSchema;
   }
   if (body?.type === 'application/xml') {
     bodyData.mode = 'xml';
-    bodyData.raw = body?.example;
+    bodyData.raw = rawText;
+    bodyData.raw_schema = body?.jsonSchema;
   }
   if (body?.type === 'text/plain') {
     bodyData.mode = 'plain';
-    bodyData.raw = body?.example;
+    bodyData.raw = rawText;
   }
   if (body?.type === 'application/octet-stream') {
     bodyData.mode = 'binary';
-    const fileName = isString(body?.example) ? body?.example?.replace(/.*\//g, '') : '';
+    const fileName = isString(rawText) ? rawText?.replace(/.*\//g, '') : '';
     bodyData.binary = {
       file_name: fileName,
       data_url: null,
-      file_path: body?.example,
+      file_path: rawText,
     };
   }
   if (body?.type === 'graphql') {
@@ -86,7 +91,7 @@ export const parseFoxBody = (body) => {
   }
   if (body?.type === 'application/x-msgpack') {
     bodyData.mode = 'msgpack';
-    bodyData.raw = body?.example;
+    bodyData.raw = rawText;
   }
   return bodyData;
 };

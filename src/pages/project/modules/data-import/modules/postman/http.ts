@@ -13,8 +13,9 @@ export const parseHttpBody = (body) => {
       const forDataItem = cloneDeep(DEFAULT_DATA_ITEM);
       forDataItem.name = item?.key ?? '';
       forDataItem.value = item?.value ?? '';
-      forDataItem.data_type = 'String';
-      forDataItem.field_type = 'text';
+      forDataItem.field_type = 'string';
+      forDataItem.description = item?.description ?? '';
+      delete forDataItem.is_required;
       list.push(forDataItem);
     });
     return list;
@@ -23,9 +24,11 @@ export const parseHttpBody = (body) => {
   const bodyData = cloneDeep(DEFAULT_HTTP_BODY);
   if (body?.mode === 'formdata') {
     bodyData.parameter = parseDataItems(body?.formdata);
+    bodyData.mode = 'form-data';
   }
   if (body?.mode === 'urlencoded') {
     bodyData.parameter = parseDataItems(body?.urlencoded);
+    bodyData.mode = 'urlencoded';
   }
   if (body?.mode === 'raw') {
     bodyData.raw = body?.raw ?? '';
@@ -59,9 +62,9 @@ export const parseHttpQuery = (query) => {
     const queryItem = cloneDeep(DEFAULT_DATA_ITEM);
     queryItem.name = item?.key ?? '';
     queryItem.value = item?.value ?? '';
-    queryItem.data_type = 'String';
-    queryItem.field_type = 'text';
+    queryItem.field_type = 'string';
     queryItem.description = item?.description ?? '';
+    delete queryItem.is_required;
     list.push(queryItem);
   });
   return list;
@@ -76,9 +79,9 @@ export const parseHttpResful = (variable) => {
     const queryItem = cloneDeep(DEFAULT_DATA_ITEM);
     queryItem.name = item?.key ?? '';
     queryItem.value = item?.value ?? '';
-    queryItem.data_type = 'String';
-    queryItem.field_type = 'text';
+    queryItem.field_type = 'string';
     queryItem.description = item?.description ?? '';
+    delete queryItem.is_required;
     list.push(queryItem);
   });
   return list;
@@ -93,9 +96,9 @@ export const parseHttpHeader = (header) => {
     const queryItem = cloneDeep(DEFAULT_DATA_ITEM);
     queryItem.name = item?.key ?? '';
     queryItem.value = item?.value ?? '';
-    queryItem.data_type = 'String';
-    queryItem.field_type = 'text';
-    queryItem.description = '';
+    queryItem.field_type = 'string';
+    queryItem.description = item?.description ?? '';
+    delete queryItem.is_required;
     list.push(queryItem);
   });
   return list;

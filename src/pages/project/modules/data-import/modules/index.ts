@@ -1,6 +1,6 @@
 import React from 'react';
 
-const openapi = React.lazy(() => import('./openapi'));
+const openapi = React.lazy(() => import('@utils/data-parse/openapi'));
 const postman = React.lazy(() => import('./postman'));
 const curl = React.lazy(() => import('./curl'));
 const hapydev = React.lazy(() => import('./hapydev'));

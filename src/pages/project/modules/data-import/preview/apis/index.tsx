@@ -2,11 +2,11 @@ import { theme } from 'antd';
 import { ApisWrapper } from './style';
 import { BaseCollection } from '#types/collection/base';
 import React from 'react';
-import { APIOptions } from '../type';
 import { useMemoizedFn } from 'ahooks';
 import produce from 'immer';
-import ApiListPanel from './apilist';
+import ApiListPanel from './apiList';
 import OptionsPanel from './options';
+import { APIOptions } from '#types/project/data-import';
 
 type Props = {
   apiList: BaseCollection[];
