@@ -15,6 +15,7 @@ import useProjectShares from './shares';
 import useProjectCookies from './cookies';
 import { setProjectNetStatus } from '@utils/net-status';
 import useProjectUsers from './users';
+import useAutoImportTasks from './auto-import-tasks';
 
 const useProjects = () => {
   const dispatch = useDispatch();
@@ -27,6 +28,7 @@ const useProjects = () => {
   useProjectShares();
   useProjectCookies();
   useProjectUsers();
+  useAutoImportTasks();
 
   const handleLoadMyProjects = useMemoizedFn((params) => {
     if (params?.showloading !== false) {

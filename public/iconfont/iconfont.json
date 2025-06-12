@@ -6,6 +6,55 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "13356154",
+      "name": "执行",
+      "font_class": "execute",
+      "unicode": "e619",
+      "unicode_decimal": 58905
+    },
+    {
+      "icon_id": "41436935",
+      "name": "生成代码",
+      "font_class": "generate-code",
+      "unicode": "e637",
+      "unicode_decimal": 58935
+    },
+    {
+      "icon_id": "12601019",
+      "name": "ai",
+      "font_class": "ai",
+      "unicode": "e68a",
+      "unicode_decimal": 59018
+    },
+    {
+      "icon_id": "5978796",
+      "name": "智能",
+      "font_class": "zhineng",
+      "unicode": "e62d",
+      "unicode_decimal": 58925
+    },
+    {
+      "icon_id": "42363606",
+      "name": "智能2",
+      "font_class": "zhineng2",
+      "unicode": "e89e",
+      "unicode_decimal": 59550
+    },
+    {
+      "icon_id": "38440757",
+      "name": "arrow-narrow-left",
+      "font_class": "arrow-narrow-left",
+      "unicode": "e65a",
+      "unicode_decimal": 58970
+    },
+    {
+      "icon_id": "38440768",
+      "name": "arrow-narrow-right",
+      "font_class": "arrow-narrow-right",
+      "unicode": "e656",
+      "unicode_decimal": 58966
+    },
+    {
       "icon_id": "23184245",
       "name": "脚本",
       "font_class": "script",

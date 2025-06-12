@@ -59,13 +59,13 @@ export const MENU_ITEMS: MenuItem[] = [
         label: '导入数据',
       },
       {
+        key: 'auto-import',
+        label: '定时导入',
+      },
+      {
         key: 'data-export',
         label: '导出数据',
       },
-      // {
-      //   key: 'sub3-3',
-      //   label: '同步数据',
-      // },
     ],
   },
 ];

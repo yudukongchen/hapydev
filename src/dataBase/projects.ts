@@ -2,7 +2,7 @@ import Dexie from 'dexie';
 
 const dbConfig = {
   DATABASE: 'projects',
-  VERSION: 1,
+  VERSION: 2,
   TABLE: {
     apis: ['&id', 'project_id', '[project_id+status]'].join(','),
     data_model: ['&id', 'project_id', '[project_id+status]'].join(','),
@@ -19,6 +19,7 @@ const dbConfig = {
     docs: ['&project_id'].join(','),
     historys: ['&id', 'project_id'].join(','),
     users: ['&uid', 'project_id'].join(','),
+    auto_imports: ['&id,project_id,uid,[project_id+uid]'].join(','),
   },
 };
 
@@ -40,6 +41,7 @@ export const Cookies = db.cookies;
 export const Docs = db.docs;
 export const Historys = db.historys;
 export const ProjectUsers = db.users;
+export const AutoImports = db.auto_imports;
 
 export default {
   Apis,
@@ -57,4 +59,5 @@ export default {
   Docs,
   Historys,
   ProjectUsers,
+  AutoImports,
 };

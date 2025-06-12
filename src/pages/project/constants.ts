@@ -9,6 +9,7 @@ const params = React.lazy(() => import('./modules/params'));
 const openApi = React.lazy(() => import('./modules/open-api'));
 const dataImport = React.lazy(() => import('./modules/data-import'));
 const dataExport = React.lazy(() => import('./modules/data-export'));
+const autoImport = React.lazy(() => import('./modules/auto-import'));
 
 export const MODULES: { [key: string]: any } = {
   base,
@@ -20,4 +21,5 @@ export const MODULES: { [key: string]: any } = {
   'open-api': openApi,
   'data-import': dataImport,
   'data-export': dataExport,
+  'auto-import': autoImport,
 };
