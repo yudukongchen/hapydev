@@ -4,6 +4,7 @@ import { defineConfig } from 'vite';
 import { createHtmlPlugin } from 'vite-plugin-html';
 import svgr from 'vite-plugin-svgr';
 import { nodePolyfills } from 'vite-plugin-node-polyfills';
+import electron from 'vite-plugin-electron'
 
 export default defineConfig({
   server: {
@@ -14,6 +15,9 @@ export default defineConfig({
   plugins: [
     nodePolyfills(),
     react(),
+    electron({
+      entry: 'electron/main.js',
+    }),
     svgr({
       include: '**/*.svg?react',
     }),

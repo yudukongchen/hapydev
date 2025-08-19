@@ -1,0 +1,18 @@
+{
+  "productName": "Hapydev",
+  "files": [
+    "./dist/**/*",
+    "./electron/**/*"
+  ],
+  "directories": {
+    "output": "./build"
+  },
+  "win": {
+    "target": "nsis",
+    "icon": "./public/icon.ico"
+  },
+  "mac": {
+    "target": "dmg",
+    "icon": "./public/icon.icns"
+  }
+}

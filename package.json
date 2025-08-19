@@ -2,19 +2,19 @@
   "name": "hapydev",
   "version": "1.0.0",
   "description": "一体化API调试工具，自动化测试|UI自动化调试|(支持Postman，Apifox等多种数据导入)",
-  "main": "index.js",
+  "main": "electron/main.js",
+  "type": "module",
   "scripts": {
     "start": "vite --mode development",
     "start:docker": "docker-compose up -d",
     "build": "vite build",
     "build:pre-docker": "docker buildx create --name mybuilder --use",
     "preview:docker": "docker build -t hapydev/hapydev:latest  .",
-    "build:docker": "docker buildx build --push --platform linux/amd64,linux/arm64  -t hapydev/hapydev:latest  ."
+    "build:docker": "docker buildx build --push --platform linux/amd64,linux/arm64  -t hapydev/hapydev:latest  .",
+    "dev": "concurrently \"vite\" \"wait-on http://localhost:8000 && electron .\"",
+    "electron:build": "vite build && electron-builder"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/hapydev-team/hapydev.git"
-  },
+  "repository": "git+https://github.com/hapydev-team/hapydev.git",
   "author": "hapydev",
   "license": "Hapydev License",
   "bugs": {
@@ -95,12 +95,18 @@
   "devDependencies": {
     "@types/node": "^20.3.1",
     "@types/react": "^18.3.3",
-    "@vitejs/plugin-react": "^4.2.1",
+    "@vitejs/plugin-react": "4.2.1",
+    "concurrently": "^9.2.0",
+    "cross-env": "^10.0.0",
+    "electron": "34.0.0",
+    "electron-builder": "^26.0.12",
     "less": "^4.2.0",
     "prettier": "^3.3.1",
     "typescript": "^5.4.5",
     "vite": "^5.0.11",
+    "vite-plugin-electron": "^0.29.0",
     "vite-plugin-html": "^3.2.1",
-    "vite-plugin-svgr": "^4.2.0"
+    "vite-plugin-svgr": "^4.2.0",
+    "wait-on": "^8.0.4"
   }
 }
