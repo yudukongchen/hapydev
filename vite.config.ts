@@ -4,9 +4,14 @@ import { defineConfig } from 'vite';
 import { createHtmlPlugin } from 'vite-plugin-html';
 import svgr from 'vite-plugin-svgr';
 import { nodePolyfills } from 'vite-plugin-node-polyfills';
-import electron from 'vite-plugin-electron'
+import electron from 'vite-plugin-electron';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 export default defineConfig({
+  base: './',
   server: {
     host: '0.0.0.0',
     port: 8000,
